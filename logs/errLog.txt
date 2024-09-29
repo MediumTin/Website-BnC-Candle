@@ -1,0 +1,168 @@
+20231112	21:47:46	f81f62d0-34d2-48b5-a52e-10e6c381b77a	TypeError : fsPromises.readFil is not a function
+20240110	02:19:45	206079dd-bc26-4729-a962-dd9daa31b3ea	Error: Not allowed by CORS
+20240112	01:07:38	50d48e88-cfc3-46b0-b3db-d35029755ec9	Error: Not allowed by CORS
+20240112	01:08:21	e395a2cb-1511-4919-9882-0e63dfb37076	Error: Not allowed by CORS
+20240112	01:09:06	fe2dfd69-4940-4d7c-a4a1-3dd608334908	Error: Not allowed by CORS
+20240113	17:43:08	6926a3e6-e33b-4c8c-ac13-69ff4e6152a8	TypeError: data.employees is not a function
+20240113	17:44:38	01058e99-c8e9-4d7d-8e7a-9b0fd77465aa	TypeError: data.employees is not a function
+20240113	17:48:42	534c5c41-5116-4c8b-8cdf-f7b7b9d943cc	TypeError: data.employees is not a function
+20240113	17:49:24	7557467d-b5d8-46d5-8eec-0a8d48a31a50	TypeError: data.employees is not a function
+20240114	16:56:00	5667e3e3-6e8c-4951-be69-49945a7ba2f3	TypeError: Assignment to constant variable.
+20240114	16:56:53	8dda75bd-e456-453f-9f0a-ec6055445de1	TypeError: Assignment to constant variable.
+20240114	17:14:45	1d6c72ed-59bf-47cc-9e74-cb9ab1a7f654	SyntaxError: Expected ',' or '}' after property value in JSON at position 36
+20240114	17:15:45	c135d9c1-726c-42dc-babe-fe98e37c8d1d	TypeError: Cannot set properties of undefined (setting 'firstname')
+20240114	17:50:00	9390e27e-488a-455d-80d3-fd655e702bb9	TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function
+20240114	17:50:59	a3790fa7-c96b-410b-b6a6-e5fa86bb8959	ReferenceError: json is not defined
+20240114	17:52:07	55b8dea0-4ebf-4026-8926-a11b2435d282	TypeError: TemporaryArray is not iterable
+20240115	00:23:25	b3b9eab7-c9dd-4bf0-a089-bfe3c9331a23	TypeError: TemporaryArray is not iterable
+20240116	00:15:11	71985c16-ca60-4d37-9605-70612c1adedb	ReferenceError: TemporaryArray is not defined
+20240608	19:37:52	0c0dfd78-7efe-4d20-88de-7cd1fef36ccf	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\views\Candle_Web_Routes\HomePage.html'
+20240608	19:38:25	4e0520e8-dedc-4074-a166-52fdfe7aa400	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\views\Candle_Web_Routes\HomePage.html'
+20240608	19:38:39	bfe4ef32-4635-42f7-aaae-359097abfdcf	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\views\Candle_Web_Routes\HomePage.html'
+20240608	19:38:41	23d59849-fb46-4919-bb95-3e25bf7cdba5	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\views\Candle_Web_Routes\HomePage.html'
+20240608	19:39:33	d294027f-7723-4d60-918a-5dfc24c062e5	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\Candle_Web_Routes\...\views\Candle_Web_Routes\HomePage.html'
+20240608	19:39:35	d3ddbe88-37af-42ea-9e1a-434bda01296c	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\Candle_Web_Routes\...\views\Candle_Web_Routes\HomePage.html'
+20240608	19:39:48	be1bb1a8-ea74-44d2-97f0-349d05a84acf	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\Candle_Web_Routes\views\Candle_Web_Routes\HomePage.html'
+20240609	10:48:23	63d422e5-b90b-4a6c-b024-6c6fb39814cb	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\views\Candle_Web_Routes\HomePage.html'
+20240609	10:52:40	30bc1133-d392-430d-be38-b797a42f0d93	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\routes\views\Candle_Web_Routes\HomePage.html'
+20240629	17:31:40	c10dbc5a-4fd5-4cf1-ae3c-c02711271b4a	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\views\Candle_Web_Routes\Payment_Policy.html'
+20240714	15:23:48	15352b24-2a49-4631-91b1-5b49ea075b10	Error: Can't set headers after they are sent.
+20240714	18:19:50	af01277b-415d-4329-91df-8b4823fafaf4	Error: Can't set headers after they are sent.
+20240714	18:19:53	f53be855-3b0e-4fd7-a1dc-22e95ff6e897	Error: Can't set headers after they are sent.
+20240714	18:19:55	508fb5ed-fb33-4184-bef3-168e42d4605a	Error: Can't set headers after they are sent.
+20240714	18:20:19	c767ae1e-edb6-4fa8-b062-ace3094e84b5	TypeError: Cannot read properties of undefined (reading 'send')
+20240714	18:20:25	d30265b3-d166-4354-99ba-9d9cfeb40889	TypeError: Cannot read properties of undefined (reading 'send')
+20240715	19:25:30	29497120-d7c6-4c6c-9266-ac71161263a1	TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function getAllCollection
+20240715	19:25:32	3af50c1c-556d-40f4-aae6-bbaa191a18db	TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function getAllCollection
+20240715	19:25:32	7c07195a-b174-4c73-90f2-18a7ad25e4a5	TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function getAllCollection
+20240715	19:25:32	57b6181c-95f6-47c5-b035-9c83b646127a	TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function getAllCollection
+20240715	19:25:33	0688ecaf-d106-478b-ac1b-13752392fc3f	TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function getAllCollection
+20240728	17:00:26	a3b40ede-432b-4c25-be1d-28714b892ded	Error: Cannot set headers after they are sent to the client
+20240728	17:00:28	79795e61-d729-43d4-b171-e8f0125c41c8	Error: Cannot set headers after they are sent to the client
+20240728	18:09:39	1f0c4e9e-3001-4901-8704-03768dee8ff9	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\HomePageRoute.html'
+20240729	01:30:01	63f0fdc8-01b8-4543-987d-9c0000e15deb	Error: Can't set headers after they are sent.
+20240729	01:30:04	c6050820-5654-4a35-aac5-29f4ae27c09d	Error: Can't set headers after they are sent.
+20240729	01:35:26	2e6b567b-ef20-4a49-a258-afe7a729a969	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Amber_And_Vanilla.html'
+20240729	01:42:24	a6b3b692-e580-400f-92b3-e5f5c4332eb0	Error: Can't set headers after they are sent.
+20240729	01:42:56	d71d771f-a6a2-4d7b-ae1b-1399c206f300	Error: Can't set headers after they are sent.
+20240803	15:06:18	d758a99c-1405-4b00-b8a3-84715ffc6161	Error: Can't set headers after they are sent.
+20240803	15:07:00	9bd6d5fe-a303-4902-93b1-f6d357e253db	Error: Can't set headers after they are sent.
+20240803	15:10:25	f51c82d7-ebd3-4cd5-a4ea-81a7d5492fb4	Error: Can't set headers after they are sent.
+20240803	15:13:12	bf926d9c-a2d4-4e33-890a-a89dcf77ac29	Error: Can't set headers after they are sent.
+20240803	15:13:18	ecdd09de-84ec-463a-afc8-76b33e6a4b5f	Error: Can't set headers after they are sent.
+20240803	15:13:24	26e5db8c-7ae2-4c2d-aabf-03ad29b9a637	Error: Can't set headers after they are sent.
+20240803	15:19:27	897470b3-af18-4350-a69f-2353eed976f7	Error: Can't set headers after they are sent.
+20240803	15:19:36	1c28c970-9fbf-46d6-bb73-0448d917506b	Error: Can't set headers after they are sent.
+20240803	15:21:16	a669c9d8-c2cf-41fa-8385-d92a3834da4a	Error: Can't set headers after they are sent.
+20240803	15:31:02	643549cc-d14b-4156-a7e9-ecf78f9c0acd	Error: Can't set headers after they are sent.
+20240803	15:31:04	b69cb9ae-473f-446b-b62e-5252f4f50461	Error: Can't set headers after they are sent.
+20240803	15:34:42	66add308-4f59-46d8-9e32-e22a4fe03a2c	Error: Can't set headers after they are sent.
+20240803	16:34:09	1a37d365-71e4-47ad-9758-ceb92af627ca	Error: Can't set headers after they are sent.
+20240803	16:35:28	618a0cd5-8afc-454e-aa90-3a593ee227dd	Error: Can't set headers after they are sent.
+20240803	17:13:18	df1532e2-6018-40bd-8d7a-5ee8a57ea397	Error: Can't set headers after they are sent.
+20240803	17:42:32	997457bb-a7fd-4e0d-bafd-c2087ea12263	Error: Can't set headers after they are sent.
+20240803	17:45:48	b7f54b3a-5099-4306-a615-8c05a9fd6ce4	Error: Can't set headers after they are sent.
+20240803	17:51:00	f4087866-b537-4de7-8426-c2b78c346cac	ReferenceError: result is not defined
+20240803	17:52:46	e7f2d31b-af4f-4c8d-844a-44aede918f92	Error: Can't set headers after they are sent.
+20240803	18:00:51	c6d7fd58-7614-43e9-bdad-6fc2dbf03a6f	Error: Can't set headers after they are sent.
+20240804	00:48:24	35110875-da6e-487a-83e7-0b570144f4a3	Error: Cannot set headers after they are sent to the client
+20240804	00:48:40	8addf24a-aa46-4411-875a-a859451801c6	Error: Cannot set headers after they are sent to the client
+20240804	00:50:31	01ef1f2a-53c7-4eaf-a215-8517eb5dc5a2	TypeError: Cannot read properties of undefined (reading 'send')
+20240810	16:27:11	d46e1f46-15ac-4be1-b4f3-898490865bd4	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\TestHTML.html'
+20240810	16:27:14	dbc9a641-c819-4146-8689-19b360195ff1	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\TestHTML.html'
+20240810	21:01:35	9c0a4786-577b-4079-b0a7-45bbcfd036f5	Error: Can't set headers after they are sent.
+20240810	21:05:17	67fc7800-afa4-4b41-96a6-8840098e71c7	Error: Can't set headers after they are sent.
+20240810	21:06:33	6f5922d0-d1b0-4706-8565-2f49eb4a984f	Error: Can't set headers after they are sent.
+20240811	15:44:26	861d7aff-83b5-4396-833f-f30e7788e297	Error: Can't set headers after they are sent.
+20240811	16:22:10	9b11a94f-e54f-4038-a4de-87dc0afda7c5	Error: Can't set headers after they are sent.
+20240817	16:13:40	4cb58602-45c8-4e80-b329-a03c2e1155a8	ReferenceError: type is not defined
+20240817	16:18:39	64f4ee4c-9648-47d0-92fd-12e1ae4f46e4	ReferenceError: Request_A_Filter is not defined
+20240817	18:33:10	3244ab82-7ae0-489e-8b09-95472ac3ceff	ReferenceError: res is not defined
+20240817	18:33:25	d7fee299-b487-4344-94d9-ee0fe5d9802b	ReferenceError: res is not defined
+20240817	18:35:59	ed056447-bdf0-4faf-8c85-965b5a9fea7d	ReferenceError: res is not defined
+20240817	18:36:09	2387fcfc-79c3-41da-8bc5-3dd893aa5ade	ReferenceError: res is not defined
+20240817	18:36:53	6801f332-4cb7-4a38-8cd9-248e91df3143	ReferenceError: con is not defined
+20240817	18:36:53	0d756023-71f3-4f5c-95ff-12b601d0f91a	ReferenceError: con is not defined
+20240817	18:46:35	131b624b-f75b-42cc-acc4-e48a3dae91b5	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	18:54:42	c9e40b0f-8bfb-4a02-90fe-267a521a96ea	TypeError: Assignment to constant variable.
+20240817	18:56:53	f9296730-cefa-4e31-98fd-5c093edbeaa3	ReferenceError: checkDuplicate is not defined
+20240817	19:13:08	11321cb0-912f-4b04-934e-d6045656f63e	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:13:23	4ff9e017-b3ee-4ca5-ace9-f4f841eacef2	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:14:27	9c5c6ece-a47e-49f0-a534-24185fed26e9	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:22:41	64a05631-fd1c-40cc-ab9a-955c6745b89a	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:23:07	157c7b61-af1b-43d7-a83d-f37a8907c80d	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:23:09	e418c254-e985-4377-bc56-bf2e747ff6f1	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:23:14	e12f9366-986c-4779-a5cf-c1729b744211	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:23:40	676f7bda-79b0-4fee-886b-fc390005be8e	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:39:36	56cf14b0-cc6a-43ba-8dbb-e9011ae67c74	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:39:39	440af630-8db3-4fe6-b9fb-3f58b20e2844	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:40:35	edc15463-5721-4046-8311-c473b14dc44d	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:40:52	774e67f1-58bd-43a4-ad4a-333419edc2d7	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:40:53	8d5357b1-3ac9-4aaa-8070-40f2ed593976	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:41:04	ae5065bc-7ef7-4a11-bc9e-3372c444a942	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:41:08	39812426-1e6a-4378-80e0-5a13e6856b66	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:41:42	f6c6060a-f989-423a-a4c7-2d35575d86a4	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:42:24	74ffc0c6-a32b-47a7-8fed-de97014473b6	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	19:43:45	e8f03625-73a9-4ecb-bc60-7bbe1c126d41	TypeError: Cannot read properties of undefined (reading 'name')
+20240817	20:07:59	e113571a-5748-41f3-9c4d-45c6e3f09365	TypeError: Cannot read properties of undefined (reading 'name')
+20240901	16:55:21	255b5f71-8fe6-4c56-9407-5ae9f1fc6d3f	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:55:23	4a0358b7-933b-4c4c-9bbc-29b03c12748c	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:55:25	f4b6f052-2606-4f3f-9219-c62b04ca105e	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:57:29	8a0e689a-8dcf-4315-ad2b-4254c0fd582a	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:57:30	66d1709f-0e40-42b6-a2b5-007334927d52	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:57:31	66151b7a-72bf-4226-954e-4e6547d9953b	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:59:17	acb716a4-efb2-4f36-98fe-a5906f2b8ade	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:59:18	d3be453b-e9e7-4644-b4ae-f4da2ed039d4	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	16:59:19	bccb58e9-7be3-48ca-8b55-97c70d023b9d	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	17:00:32	ad36de7b-2888-4292-82d0-70baf1435eee	TypeError: Cannot read properties of undefined (reading 'users')
+20240901	17:01:50	27ef775f-220c-4438-8b8f-37a5a43bf9bd	TypeError: Cannot read properties of undefined (reading 'users')
+20240902	10:22:17	7c085d38-d96d-44d5-bb4a-26f296ab9dde	TypeError: Cannot read properties of undefined (reading 'users')
+20240902	10:23:17	27721a7e-4f72-4de3-854b-6ff94f88794c	TypeError: Cannot read properties of undefined (reading 'users')
+20240902	10:23:22	dcb9a687-a7be-4b2d-adf5-ce300a88407d	TypeError: Cannot read properties of undefined (reading 'users')
+20240902	10:31:31	bbfd1070-4ad2-4c4a-ac0d-58d96b6fcc8e	ReferenceError: result is not defined
+20240903	16:08:21	c6461bdf-96d1-4077-8747-e4ecaf8e3aad	TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function GetAllProductInformation
+20240908	16:30:50	38509243-7c24-4852-ae5b-bf257996c39e	TypeError: Cannot convert object to primitive value
+20240908	16:31:11	c543072f-bb70-4e16-934a-8a598f32d952	TypeError: Cannot convert object to primitive value
+20240914	01:03:06	415c776b-df32-4d20-ab00-afb002e76474	TypeError: Cannot convert object to primitive value
+20240914	01:03:39	3a35e774-2729-4ca1-b96e-21fa23db27a7	TypeError: Cannot convert object to primitive value
+20240914	01:04:29	6f0572f3-07ca-4efb-a8a0-f908e334aca5	TypeError: Cannot read properties of undefined (reading 'users')
+20240914	01:05:24	ed6bf4b5-82c9-4bad-bd63-9e6cf4f717ab	TypeError: Cannot read properties of undefined (reading 'users')
+20240914	13:24:38	238ac52f-67a3-4636-bd9d-a6e84c9f1fcd	TypeError: Cannot convert object to primitive value
+20240914	13:43:55	13ecf86a-e795-42f9-b6a6-665888f36ebb	ReferenceError: password is not defined
+20240914	13:44:58	17c5449d-e0ed-443d-8fa8-c53e63c8421f	ReferenceError: password is not defined
+20240914	13:47:01	b4675d13-207e-4cb9-8795-b53d08b5e0b0	ReferenceError: password is not defined
+20240914	13:51:00	4192848e-0e82-441b-86a6-d6f15f20e69d	ReferenceError: password is not defined
+20240914	13:59:29	32a74813-8a1a-43cc-b292-e594d1e1b536	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\HomePageRoute.html'
+20240914	14:00:47	961f0937-5d22-45d9-a4a3-929affbb5cfd	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\views\Candle_Web_Routes\HomePageRoute.html'
+20240914	14:01:01	0ec5d7bf-15d7-4778-92d9-d04220405dfd	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\HomePageRoute.html'
+20240915	13:11:10	6a7a8758-9a4c-44ba-9cec-cc62051853a0	SyntaxError: Expected double-quoted property name in JSON at position 75
+20240915	13:32:05	faf5385c-e0ce-44bd-a4ab-e3b9c9742187	TypeError: req.body.json is not a function
+20240915	13:34:43	7cdec031-9941-4d38-a9d1-85499284ea70	TypeError: Cannot convert object to primitive value
+20240915	13:35:04	a217c51f-5f0b-472c-97c5-277d514117d0	TypeError: Cannot convert object to primitive value
+20240915	13:35:09	cda8eaa5-ab69-4182-9311-df73f943ca34	TypeError: Cannot convert object to primitive value
+20240915	15:16:18	63152b74-7d50-442b-8038-3fba9bb14d53	TypeError: CheckAdminRight is not a function
+20240915	15:16:20	ff56b569-9077-445f-9583-6975d47736e0	TypeError: CheckAdminRight is not a function
+20240915	15:16:24	9a121b26-aeae-4404-bbf3-406f69e676a0	TypeError: CheckAdminRight is not a function
+20240915	15:16:24	40d6a268-f445-48f8-8f44-bd82e3035286	TypeError: CheckAdminRight is not a function
+20240915	15:16:25	9120be21-8097-4c60-af45-994d29518c20	TypeError: CheckAdminRight is not a function
+20240915	15:16:25	f792ed8c-0257-4ce2-87ac-6be346845c8d	TypeError: CheckAdminRight is not a function
+20240915	15:16:25	5c9a859d-f6ac-4078-9c0a-b3acc20b733b	TypeError: CheckAdminRight is not a function
+20240915	15:16:25	84f564cf-fd73-42ac-a54b-06c25e6e5214	TypeError: CheckAdminRight is not a function
+20240915	15:16:25	6df199ea-a400-4850-9ff9-771ae68ef496	TypeError: CheckAdminRight is not a function
+20240915	15:16:26	db087090-84aa-4933-b3a3-185d984b4a77	TypeError: CheckAdminRight is not a function
+20240915	15:16:26	1fc8d2c2-fa77-488c-b972-d61451eab838	TypeError: CheckAdminRight is not a function
+20240915	15:16:26	627212ab-c096-4755-84ff-163a52555049	TypeError: CheckAdminRight is not a function
+20240915	15:16:27	6dd018bf-1dbb-4988-bfe1-1a5626871b7b	TypeError: CheckAdminRight is not a function
+20240915	15:16:27	90532afd-17eb-4df0-8a7e-890c395e7650	TypeError: CheckAdminRight is not a function
+20240915	15:16:27	5e1042ca-fca6-4fef-9845-ef670274f145	TypeError: CheckAdminRight is not a function
+20240915	15:16:27	3a4bee01-b9dc-4406-84ab-9431a0e1b110	TypeError: CheckAdminRight is not a function
+20240915	15:16:27	77126f88-a0a9-4898-befe-218a020b838f	TypeError: CheckAdminRight is not a function
+20240915	15:16:27	555cd9c7-f478-4f91-8cf6-3f4f93b87a61	TypeError: CheckAdminRight is not a function
+20240915	15:16:28	794b0ada-b3a9-4675-b7b9-058c9fe5f64d	TypeError: CheckAdminRight is not a function
+20240915	15:16:28	a35e2b7c-f432-4da6-b1c6-3d996643fec1	TypeError: CheckAdminRight is not a function
+20240915	15:16:28	4606d26b-370e-4fad-9876-f9108ae15858	TypeError: CheckAdminRight is not a function
+20240915	15:16:28	dc805fb3-3594-4f23-9084-6c722d3d244e	TypeError: CheckAdminRight is not a function
+20240915	15:16:29	aa46e412-2472-4d91-8ac6-77323898b3b0	TypeError: CheckAdminRight is not a function
+20240915	15:16:30	974bcc88-0963-4ab8-8ea3-ae937ef6161b	TypeError: CheckAdminRight is not a function
+20240922	02:43:29	ecd60224-21ea-490c-ba78-8c0757e078ca	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\'views\Candle_Web_Routes\HomePage.html''
+20240922	16:07:58	24c4915d-e534-4113-a475-10921f2b129f	Error: Can't set headers after they are sent.

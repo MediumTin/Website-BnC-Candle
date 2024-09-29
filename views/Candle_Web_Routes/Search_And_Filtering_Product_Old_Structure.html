@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BnCCandle</title>
+    <link rel="icon" type="image/x-icon" href="../img/IconBnC.ico"> 
+    <!-- Declare css and include into this file -->
+    <!-- <link rel="stylesheet" href="../css/style_Candle.css" />    -->
+    <link rel="stylesheet" href="../css/Header_Component.css" />  
+    <!-- Declare Boostrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .col-lg-3 {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .col-xs-12 {
+            width: 100%;
+        }
+    </style>
+    <!-- <script type="module">
+        import datajson from 'Test_Data.json';
+    </script> -->
+</head>
+
+<body>
+    
+    <!-- 1. Search bar and Navigation bar in header page. -->
+    <div class="div-footer;" style="background-color: white;">
+        <!-- Describe search bar and logo -->
+        <table class="table1">
+            <tr style="width: 50%;">
+                <td>
+                    <img src="../img/IconBnC_Removed.png" style="width:100px;height:100px;">
+                </td>
+                <!-- <th style="color:black;">
+                    <input type="text" name="search">
+                </th>
+                <th>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </th> -->
+                <td>
+                    <div class="search-container">
+                        <form action="/action_page.php">
+                          <input type="text" placeholder="Search your product..." name="search" style="height:40px ;width:400px;">
+                          <button type="submit" style="height:40px ;width: 50px;"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </td>
+                <td style="color:black;">
+                    <button style="height:40px ;width: 80px;">Shopping bag</button>
+                </td>
+                <td style="color:black;">
+                    <a href="/login_handling" id="LoginLink" style="text-decoration: none;visibility: hidden;"></a>
+                    <button style="height:40px ;width: 80px;" id="User_Account">User account</button>
+                    <script>
+                        var LoginButton = document.getElementById("User_Account");
+
+                        LoginButton.onclick = function(){
+                            document.getElementById("LoginLink").click();
+                        } 
+                    </script>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Describe Top Navigation bar -->
+        <div class="topnav">
+            <table class="table1">
+                <tr>
+                    <th><a href="/">Home</a></th>
+                    <th><a href="candles">Candles</a></th>
+                    <th>
+                        <!-- <a href="#oil">Oils</a> -->
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                              <a href="oils">Oils</a>   
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="diffuse_oils">Diffuse Oils</a>
+                              <a href="natural_oils">Natural Oils</a>
+                            </div>
+                        </div> 
+                    </th>
+                    <th>
+                        <!-- <a href="#accessory">Accessory</a> -->
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                              <a href="accessory">Accessory</a>
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="burn_candles">Burn Candles</a>
+                              <a href="care_candles">Care Candles</a>
+                            </div>
+                        </div> 
+                    </th>
+                    <th><a href="gift">Gift</a></th>
+                    <th><a href="news">News</a></th>
+                    <th><a href="contact">Contact</a></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 2. Combination in Center component-->
+    <div style="margin-left: 100px;margin-right: 100px;margin-top: 20px;margin-bottom: 20px;">
+        <!-- 2.1. Menu bar for filter product information-->
+        <div style="width: 250px; float: left;color: black;" >
+            <table>
+                <tr>
+                    <th>
+                        <h6 style="text-align: left;">Search</h6>
+                        <form action="/action_page.php">
+                            <input type="text" placeholder="Search your product..." name="search" style="height:40px ;width:200px;">
+                            <button type="submit" style="height:40px ;width: 200px;"><i class="fa fa-search"></i></button>
+                        </form>
+                        <br>
+                    </th>
+                </tr>
+            </table>
+            <form style="text-align: left;" action="/action_page2.php">
+                <table>
+                    <tr>
+                        <th>
+                            <h6 style="text-align: left;">Type</h6>
+                            <input type="radio" id="candle" name="fav_language" value="candle">
+                            <label style="font-size: 20px;" for="candle">Candle</label><br>
+                            <input type="radio" id="oil" name="fav_language" value="oil">
+                            <label style="font-size: 20px;" for="oil">Oil</label><br>
+                            <input type="radio" id="accessory" name="fav_language" value="accessory">
+                            <label style="font-size: 20px;" for="accessory">Accessory</label><br>
+                            <input type="radio" id="gift" name="fav_language" value="gift">
+                            <label style="font-size: 20px;" for="gift">Gift</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h6 style="text-align: left;">Product group</h6>
+                            <input type="radio" id="best_saler" name="fav_language" value="best_saler">
+                            <label style="font-size: 20px;" for="best_saler">Best saler</label><br>
+                            <input type="radio" id="discount" name="fav_language" value="discount">
+                            <label style="font-size: 20px;" for="discount">Discount</label><br>
+                            <input type="radio" id="new_arrival" name="fav_language" value="new_arrival">
+                            <label style="font-size: 20px;" for="new_arrival">New arrival</label><br>
+                            <input type="radio" id="sweet_fruit" name="fav_language" value="sweet_fruit">
+                            <label style="font-size: 20px;" for="sweet_fruit">Sweet and Fruit</label><br>
+                            <input type="radio" id="wood_men" name="fav_language" value="wood_men">
+                            <label style="font-size: 20px;" for="wood_men">Wood and Men</label><br>
+                            <input type="radio" id="fresh_relax" name="fav_language" value="fresh_relax">
+                            <label style="font-size: 20px;" for="fresh_relax">Fresh and Relax</label><br>
+                            <input type="radio" id="flower_herb" name="fav_language" value="flower_herb">
+                            <label style="font-size: 20px;" for="flower_herb">Flower and Herb</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h6 style="text-align: left;">Brand</h6>
+                            <input type="radio" id="lumos" name="fav_language" value="lumos">
+                            <label style="font-size: 20px;" for="lumos">Lumos</label><br>
+                            <input type="radio" id="citta" name="fav_language" value="citta">
+                            <label style="font-size: 20px;" for="citta">Citta</label><br>
+                            <input type="radio" id="no_brand" name="fav_language" value="no_brand">
+                            <label style="font-size: 20px;" for="no_brand">No Brand</label><br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h6 style="text-align: left;">Price</h6>
+                            <input type="radio" id="smaller_100KVND" name="fav_language" value="smaller_100KVND">
+                            <label style="font-size: 20px;" for="smaller_100KVND">Smaller 100.000 VND</label><br>
+                            <input type="radio" id="100KVND_to_200KVND" name="fav_language" value="100KVND_to_200KVND">
+                            <label style="font-size: 20px;" for="100KVND_to_200KVND">100.000 to 200.000 VND</label><br>
+                            <input type="radio" id="200KVND_to_300KVND" name="fav_language" value="200KVND_to_300KVND">
+                            <label style="font-size: 20px;" for="200KVND_to_300KVND">200.000 to 300.000 VND</label><br>
+                            <input type="radio" id="300KVND_to_500KVND" name="fav_language" value="300KVND_to_500KVND">
+                            <label style="font-size: 20px;" for="300KVND_to_500KVND">300.000 to 500.000 VND</label><br>
+                            <input type="radio" id="larger_500KVND" name="fav_language" value="larger_500KVND">
+                            <label style="font-size: 20px;" for="larger_500KVND">Larger 500.000 VND</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h6 style="text-align: left;">Color</h6>
+                            <input type="radio" id="black" name="fav_language" value="black">
+                            <label style="font-size: 20px;" for="black">Black</label><br>
+                            <input type="radio" id="white" name="fav_language" value="white">
+                            <label style="font-size: 20px;" for="white">White</label><br>
+                            <input type="radio" id="red" name="fav_language" value="red">
+                            <label style="font-size: 20px;" for="red">Red</label><br>
+                            <input type="radio" id="pink" name="fav_language" value="pink">
+                            <label style="font-size: 20px;" for="pink">Pink</label><br>
+                            <input type="radio" id="blue" name="fav_language" value="blue">
+                            <label style="font-size: 20px;" for="blue">Blue</label><br>
+                            <input type="radio" id="green" name="fav_language" value="green">
+                            <label style="font-size: 20px;" for="green">Green</label><br>
+                            <input type="radio" id="yellow" name="fav_language" value="yellow">
+                            <label style="font-size: 20px;" fo
+                            r="yellow">Yellow</label>
+                        </th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <!-- 2.2. Menu bar for showing product information-->
+        <div style="margin-left: 260px; color: black;">
+            <!-- <button type="button" onclick="loadDoc()">Try it</button> -->
+            <!-- <p id="demo"> hello</p> -->
+            <table style="border-spacing: 35px;">
+                <tr>
+                    <th>
+                        <a id="RouteIDA11" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA11" src="../img/Automation/Image/1.jpg" width="200" height="200">
+                        <p id="DisplayNameA11" style="font-size: 20px;">Candle 1 </p>
+                        <p id="DisplayPriceA11" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA12" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA12" src="../img/Automation/Image/2.jpg" width="200" height="200">
+                        <p id="DisplayNameA12" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA12" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA13" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA13" src="../img/Automation/Image/3.jpg" width="200" height="200">
+                        <p id="DisplayNameA13" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA13" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th> 
+                    <th>
+                        <a id="RouteIDA14" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA14" src="../img/Automation/Image/4.jpg" width="200" height="200">
+                        <p id="DisplayNameA14" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA14" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a id="RouteIDA21" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA21" src="../img/Automation/Image/5.jpg" width="200" height="200">
+                        <p id="DisplayNameA21" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA21" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA22" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA22" src="../img/Automation/Image/6.jpg" width="200" height="200">
+                        <p id="DisplayNameA22" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA22" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA23" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA23" src="../img/Automation/Image/7.jpg" width="200" height="200">
+                        <p id="DisplayNameA23" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA23" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA24" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA24" src="../img/Automation/Image/8.jpg" width="200" height="200">
+                        <p id="DisplayNameA24" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA24" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a id="RouteIDA31" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA31" src="../img/Automation/Image/9.jpg" width="200" height="200">
+                        <p id="DisplayNameA31" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA31" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA32" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA32" src="../img/Automation/Image/10.jpg" width="200" height="200">
+                        <p id="DisplayNameA32" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA32" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA33" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA33" src="../img/Automation/Image/11.jpg" width="200" height="200">
+                        <p id="DisplayNameA33" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA33" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA34" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA34" src="../img/Automation/Image/12.jpg" width="200" height="200">
+                        <p id="DisplayNameA34" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA34" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a id="RouteIDA41" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA41" width="200" height="200">
+                        <p id="DisplayNameA41" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA41" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA42" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA42" src="../img/Automation/Image/2.jpg" width="200" height="200">
+                        <p id="DisplayNameA42" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA42" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA43" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA43" src="../img/Automation/Image/3.jpg" width="200" height="200">
+                        <p id="DisplayNameA43" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA43" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                    <th>
+                        <a id="RouteIDA44" href="/candle_information" style="text-decoration: none; color: black;">
+                        <img id="DisplayImageA44" src="../img/Automation/Image/4.jpg" width="200" height="200">
+                        <p id="DisplayNameA44" style="font-size: 20px;">Candle 1</p>
+                        <p id="DisplayPriceA44" style="font-size: 20px;">285.000 VND</p>
+                        </a>
+                    </th>
+                </tr>
+            </table>
+            
+            <script>
+                loadDoc();
+                function loadDoc() {
+                    var receivedMessage = "";
+                    // document.getElementById("demo").innerHTML = "Changed"; 
+                    console.log("passed")
+                    const xhttp = new XMLHttpRequest();
+                    // xhttp.onload = function() {
+                    //     document.getElementById("demo").innerHTML =
+                    //     this.responseText;
+                    // }
+                    xhttp.open("POST", "/candles");
+                    xhttp.setRequestHeader( 
+                    "Content-Type", "application/json" 
+                    ); 
+                    var data = JSON.stringify( 
+                        { name: "ngoc2345", email: "abcdef" } 
+                    ); 
+                    xhttp.send(data);
+                    // Create a state change callback 
+                    xhttp.onreadystatechange = function () { 
+                        if (xhttp.readyState === 4 && 
+                            xhttp.status === 200) { 
+                            // Print received data from server 
+                            receivedMessage = this.responseText;
+                            receivedMessage = JSON.parse(receivedMessage);
+                            // document.getElementById("demo").innerHTML = receivedMessage[0].name; 
+                            var temp = 0;
+                            let stringtemp = "";
+                            let myarray = "";
+                            for(var row = 1;row<=4;row++){
+                                for(var col = 1;col<=4;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    document.getElementById(`DisplayImageA${row}${col}`).src = `${receivedMessage[temp].image}`; 
+                                    document.getElementById(`DisplayPriceA${row}${col}`).innerHTML = `${receivedMessage[temp].price}`;
+                                    document.getElementById(`DisplayNameA${row}${col}`).innerHTML = `${receivedMessage[temp].name}`;
+                                    document.getElementById(`RouteIDA${row}${col}`).href = `${"/candle_information/" + myarray}`;
+                                    // document.getElementById(`RouteIDA${row}${col}`).href = `${"/candle_information/"}`;
+                                    temp = temp + 1;
+                                }
+                            }
+                        } 
+                    }; 
+                    // setTimeout(loadDoc, 1000); 
+                    
+                }
+                
+
+                // showMenu();
+            </script>
+        </div>
+    </div>
+    <!-- 3. Footer component -->
+    <div class="div-footer;" style="background-color: #CBB8B8;">
+        <table class="table3">
+            <tr style="text-align: left;">
+                <td><h5><b>Contact</b></h5></td>
+                <td><h5><b>Support</b></h5></td>
+                <td><h5><b>Reference</b></h5></td>
+                <td><h5><b>About Us</b></h5></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;vertical-align: text-top;">
+                    <p style="font-size: 18px;">Adress: District 7, Ho Chi Minh City, Viet Nam</p>
+                    <p style="font-size: 18px;">Phone: 0826781112</p>
+                    <p style="font-size: 18px;">Email: nenthombnc.2005@gmail.com.vn</p>
+                </td>
+                <td style="text-align: left;vertical-align: text-top;">
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="/another_information/delivery_policy">Delivery Policy</a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="/another_information/payment_policy">Payment Policy</a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="/another_information/return_policy">Return Policy</a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="/another_information/privacy_policy">Privacy Policy</a>
+                </td>
+                <td style="text-align: center;">
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="https://shopee.vn/mymiehouse?categoryId=100636&entryPoint=ShopByPDP&itemId=3164363233&upstream=search" target="_blank">
+                        <img src="../img/shopee.jfif" width="30" height="30">
+                    </a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="https://tiki.vn/cua-hang/the-gioi-mui-huong-tu-nhien?source_screen=product_detail&source_engine=organic" target="_blank">
+                        <img src="../img/tiki.png" width="30" height="30">
+                    </a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="https://www.lazada.vn/shop/heber-natural-life/?itemId=2497028313&spm=a2o4n.pdp_revamp.seller.1.373172f2nHEbic&path=promotion-428634-0.htm&tab=promotion&channelSource=pdp" target="_blank">
+                        <img src="../img/lazada.jfif" width="30" height="30">
+                    </a>
+                </td>
+                <td style="text-align: center;">
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="https://www.facebook.com/profile.php?id=100087257184951&sk=followers" target="_blank">
+                        <img src="../img/facebook.jfif" width="30" height="30">
+                    </a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="https://www.instagram.com/wickycandle/" target="_blank">
+                        <img src="../img/instagram.jfif" width="30" height="30">
+                    </a><br>
+                    <a style="text-decoration: none;font-size: 18px;color: black;"href="https://www.youtube.com/@henygarden" target="_blank">
+                        <img src="../img/youtube.jfif" width="30" height="30">
+                    </a>
+                </td>
+            </tr>     
+        </table>
+    </div>
+    
+
+</body>
+
+</html>
