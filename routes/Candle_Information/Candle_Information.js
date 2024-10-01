@@ -8,6 +8,7 @@ const Menu_Candle_Processing = require('../../controllers/Website_Candle_Light/M
 var result = "";
 
 const client = createClient();  // Create a Redis client
+// New implementation for Engine template handlerbar
 
 Router.get('^/$|',async (req,res)=>{
    // Get all product information in Cache (If Cache available) and in Database (If Cache unavailable)
