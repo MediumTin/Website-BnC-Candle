@@ -166,3 +166,4 @@
 20240915	15:16:30	974bcc88-0963-4ab8-8ea3-ae937ef6161b	TypeError: CheckAdminRight is not a function
 20240922	02:43:29	ecd60224-21ea-490c-ba78-8c0757e078ca	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\'views\Candle_Web_Routes\HomePage.html''
 20240922	16:07:58	24c4915d-e534-4113-a475-10921f2b129f	Error: Can't set headers after they are sent.
+20241003	09:27:28	0dc07f8e-9899-4512-ad9d-6380d6d6bb3c	Error: Failed to lookup view "home2" in views directory "./views/Example_Express_Handlebar"

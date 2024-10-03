@@ -3,11 +3,16 @@ const express = require('express');
 const Router = express.Router();
 const path = require('path');
 const Redis_API = require('../../controllers/API_with_Redis/API_Redis');
+
 const { createClient } = require('redis');
 
 // Process with router
 Router.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','HomePage.html'));
+    var data = "NTT";
+    // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','HomePage.html'));
+    res.send(`
+        
+    `)
 })
 
 // Process with some API in Redis
