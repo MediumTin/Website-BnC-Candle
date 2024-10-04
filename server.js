@@ -20,7 +20,8 @@ const RedisPort = PORT;
 // to connect express to handlbar
 app.engine('handlebars', expressHb.engine());
 app.set('view engine', 'handlebars');
-app.set('views', './views/Example_Express_Handlebar');
+// app.set('views', './views/Example_Express_Handlebar');
+app.set('views', './views/Candle_Web_Routes');
 
 const client = redis.createClient();
 // client.connect();
@@ -53,24 +54,7 @@ console.log("Program is running ----------");
 // app.use('/logout', require('./routes/logout'));
 
 
-// app.use('/',require('./routes/Candle_Web_Routes/HomePageRoute'));
-
-//Example with handlbar
-app.get('/',(req,res)=>{
-    // Refer to Body 2
-    res.render('home2',{
-        data : "hello 11",
-        data2 : 4092001
-    });
-
-    //Refer to Body 1
-    // res.render('home2',{
-    //     data : "hello 11",
-    //     data2 : 4092001
-    // });
-
-    //Both Body 1 or Body 2 still same header and footer
-})
+app.use('/',require('./routes/Candle_Web_Routes/HomePageRoute'));
 
 app.use('/candles',require('./routes/Candle_Web_Routes/Candles'));
 // app.get('/candles', (req, res) => {

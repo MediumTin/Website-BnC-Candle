@@ -1,0 +1,190 @@
+
+
+<!-- Describe Top Navigation bar -->
+<div class="topnav">
+    <table class="table1">
+        <tr>
+            <th><a href="/">Home</a></th>
+            <th><a href="candles">Candles</a></th>
+            <th>
+                <!-- <a href="#oil">Oils</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="oils">Oils</a>   
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="diffuse_oils">Diffuse Oils</a>
+                        <a href="natural_oils">Natural Oils</a>
+                    </div>
+                </div> 
+            </th>
+            <th>
+                <!-- <a href="#accessory">Accessory</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="accessory">Accessory</a>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="burn_candles">Burn Candles</a>
+                        <a href="care_candles">Care Candles</a>
+                    </div>
+                </div> 
+            </th>
+            <th><a href="gift">Gift</a></th>
+            <th><a href="news">News</a></th>
+            <th><a href="contact">Contact</a></th>
+        </tr>
+    </table>
+</div>
+</div>
+{{!-- <style>
+
+.panel-login {
+    border-color: #ccc;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+    color: #00415d;
+    background-color: #fff;
+    border-color: #fff;
+    text-align:center;
+}
+.panel-login>.panel-heading a{
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    font-size: 15px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+    color: #029f5b;
+    font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    clear: both;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+    height: 45px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+    outline:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-color: #ccc;
+}
+.btn-login {
+    background-color: #59B2E0;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+    color: #fff;
+    background-color: #53A3CD;
+    border-color: #53A3CD;
+}
+.forgot-password {
+    text-decoration: underline;
+    color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+    text-decoration: underline;
+    color: #666;
+}
+
+.btn-register {
+    background-color: #1CB94E;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+    color: #fff;
+    background-color: #1CA347;
+    border-color: #1CA347;
+} 
+</style> --}}
+<!-- 2. Combination in Center component-->
+<div class="container" style="padding-top: 30px">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Login form -->
+                        <form id="login-form"  action="candles/addnewproduct" method="post" role="form" style="display: block;">
+                            <div class="form-group">
+                                <input type="text" name="productname" id="productname" tabindex="1" class="form-control" placeholder="Product Name" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="producttype" id="producttype" tabindex="1" class="form-control" placeholder="Product Type" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="productgroup" id="productgroup" tabindex="1" class="form-control" placeholder="Product Group" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="productbrand" id="productbrand" tabindex="1" class="form-control" placeholder="Product Brand" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="productprice" id="productprice" tabindex="1" class="form-control" placeholder="Product Price" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="productpricerange" id="productpricerange" tabindex="1" class="form-control" placeholder="Product Price Range" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="productcolor" id="productcolor" tabindex="1" class="form-control" placeholder="Product Color" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="productimage" id="productimage" tabindex="1" class="form-control" placeholder="Product Image" value="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3">
+                                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Add to Database">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 

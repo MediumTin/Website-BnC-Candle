@@ -5,19 +5,19 @@ const path = require('path');
 
 // Process with router
 Router.get('/delivery_policy',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Delivery_Policy.html'));
+    res.render('Delivery_Policy');
 });
 
 Router.get('/payment_policy',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Payment_Policy.html'));
+    res.render('Payment_Policy');
 });
 
 Router.get('/return_policy',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Return_Policy.html'));
+    res.render('Return_Policy');
 });
 
 Router.get('/privacy_policy',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Privacy_Policy.html'));
+    res.render('Privacy_Policy');
 });
 
 // Export router to common usage

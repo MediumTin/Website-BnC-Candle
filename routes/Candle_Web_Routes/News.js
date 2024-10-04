@@ -5,7 +5,8 @@ const path = require('path');
 
 // Process with router
 Router.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','News.html'));
+    // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','News.html'));
+    res.render('News');
 })
 
 // Export router to common usage

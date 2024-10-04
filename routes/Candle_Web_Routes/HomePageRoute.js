@@ -3,6 +3,7 @@ const express = require('express');
 const Router = express.Router();
 const path = require('path');
 const Redis_API = require('../../controllers/API_with_Redis/API_Redis');
+const expressHb = require('express-handlebars');
 
 const { createClient } = require('redis');
 
@@ -10,9 +11,12 @@ const { createClient } = require('redis');
 Router.get('/',(req,res)=>{
     var data = "NTT";
     // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','HomePage.html'));
-    res.send(`
-        
-    `)
+    res.render('HomePage',{
+        data : "hello 12",
+        data2 : 4092001
+    });
+    //Refer to Body 1
+    // res.render('HomePage');
 })
 
 // Process with some API in Redis
