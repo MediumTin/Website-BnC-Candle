@@ -1,0 +1,546 @@
+<!-- Describe Top Navigation bar -->
+<div class="topnav">
+    <table class="table1">
+        <tr>
+            <th><a href="/">Home</a></th>
+            <th><a href="../candles">Candles</a></th>
+            <th>
+                <!-- <a href="#oil">Oils</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="../oils">Oils</a>   
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../diffuse_oils">Diffuse Oils</a>
+                        <a href="../natural_oils">Natural Oils</a>
+                    </div>
+                </div> 
+            </th>
+            <th>
+                <!-- <a href="#accessory">Accessory</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="../accessory">Accessory</a>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../burn_candles">Burn Candles</a>
+                        <a href="../care_candles">Care Candles</a>
+                    </div>
+                </div> 
+            </th>
+            <th><a href="../gift">Gift</a></th>
+            <th><a href="../news">News</a></th>
+            <th><a href="../contact">Contact</a></th>
+            <th><a href="../Add_new_product">New product</a></th>
+        </tr>
+    </table>
+</div>
+</div>
+<!-- 2. Combination in Center component-->
+<div style="margin-left: 100px;margin-right: 100px;margin-top: 20px;margin-bottom: 20px;">
+    <!-- 2.1. Menu bar for filter product information-->
+    <div style="width: 250px; float: left;color: black;" >
+        <table>
+            <tr>
+                <th>
+                    <h6 style="text-align: left;">Search</h6>
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search your product..." name="search" style="height:40px ;width:200px;">
+                        <button type="submit" style="height:40px ;width: 200px;"><i class="fa fa-search"></i></button>
+                    </form>
+                    <br>
+                </th>
+            </tr>
+        </table>
+        <form style="text-align: left;" action="/action_page2.php">
+            <table>
+                <tr>
+                    <th>
+                        <!-- A -->
+                        <h6 style="text-align: left;">Type</h6> 
+                        <!-- A1 -->
+                        <input type="checkbox" id="candle" name="fav_language" value="candle" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="candle">Candle</label><br>
+                        <!-- A2 -->
+                        <input type="checkbox" id="oil" name="fav_language" value="oil" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="oil">Oil</label><br>
+                        <!-- A3 -->
+                        <input type="checkbox" id="accessory" name="fav_language" value="accessory" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="accessory">Accessory</label><br>
+                        <!-- A4 -->
+                        <input type="checkbox" id="gift" name="fav_language" value="gift" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="gift">Gift</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <!-- B -->
+                        <h6 style="text-align: left;">Product group</h6>
+                        <!-- B1 -->
+                        <input type="checkbox" id="best_saler" name="fav_language" value="best_saler" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="best_saler">Best seller</label><br>
+                        <!-- B2 -->
+                        <input type="checkbox" id="discount" name="fav_language" value="discount" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="discount">Discount</label><br>
+                        <!-- B3 -->
+                        <input type="checkbox" id="new_arrival" name="fav_language" value="new_arrival" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="new_arrival">New arrival</label><br>
+                        <!-- B4 -->
+                        <input type="checkbox" id="sweet_fruit" name="fav_language" value="sweet_fruit" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="sweet_fruit">Sweet and Fruit</label><br>
+                        <!-- B5 -->
+                        <input type="checkbox" id="wood_men" name="fav_language" value="wood_men" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="wood_men">Wood and Men</label><br>
+                        <!-- B6 -->
+                        <input type="checkbox" id="fresh_relax" name="fav_language" value="fresh_relax" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="fresh_relax">Fresh and Relax</label><br>
+                        <!-- B7 -->
+                        <input type="checkbox" id="flower_herb" name="fav_language" value="flower_herb" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="flower_herb">Flower and Herb</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <!-- C -->
+                        <h6 style="text-align: left;">Brand</h6>
+                        <!-- C1 -->
+                        <input type="checkbox" id="lumos" name="fav_language" value="lumos" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="lumos">Lumos</label><br>
+                        <!-- C2 -->
+                        <input type="checkbox" id="citta" name="fav_language" value="citta" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="citta">Citta</label><br>
+                        <!-- C3 -->
+                        <input type="checkbox" id="no_brand" name="fav_language" value="no_brand" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="no_brand">No Brand</label><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <!-- D -->
+                        <h6 style="text-align: left;">Price</h6>
+                        <!-- D1 -->
+                        <input type="checkbox" id="smaller_100KVND" name="fav_language" value="smaller_100KVND" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="smaller_100KVND">Smaller 100.000 VND</label><br>
+                        <!-- D2 -->
+                        <input type="checkbox" id="100KVND_to_200KVND" name="fav_language" value="100KVND_to_200KVND" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="100KVND_to_200KVND">100.000 to 200.000 VND</label><br>
+                        <!-- D3 -->
+                        <input type="checkbox" id="200KVND_to_300KVND" name="fav_language" value="200KVND_to_300KVND" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="200KVND_to_300KVND">200.000 to 300.000 VND</label><br>
+                        <!-- D4 -->
+                        <input type="checkbox" id="300KVND_to_500KVND" name="fav_language" value="300KVND_to_500KVND" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="300KVND_to_500KVND">300.000 to 500.000 VND</label><br>
+                        <!-- D5 -->
+                        <input type="checkbox" id="larger_500KVND" name="fav_language" value="larger_500KVND" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="larger_500KVND">Larger 500.000 VND</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <!-- E -->
+                        <h6 style="text-align: left;">Color</h6>
+                        <!-- E1 -->
+                        <input type="checkbox" id="black" name="fav_language" value="black" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="black">Black</label><br>
+                        <!-- E2 -->
+                        <input type="checkbox" id="white" name="fav_language" value="white" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="white">White</label><br>
+                        <!-- E3 -->
+                        <input type="checkbox" id="red" name="fav_language" value="red" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="red">Red</label><br>
+                        <!-- E4 -->
+                        <input type="checkbox" id="pink" name="fav_language" value="pink" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="pink">Pink</label><br>
+                        <!-- E5 -->
+                        <input type="checkbox" id="blue" name="fav_language" value="blue" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="blue">Blue</label><br>
+                        <!-- E6 -->
+                        <input type="checkbox" id="green" name="fav_language" value="green" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="green">Green</label><br>
+                        <!-- E7 -->
+                        <input type="checkbox" id="yellow" name="fav_language" value="yellow" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="yellow">Yellow</label><br>
+                        <!-- E8 -->
+                        <input type="checkbox" id="orange" name="fav_language" value="orange" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="orange">Orange</label><br>
+                        <!-- E9 -->
+                        <input type="checkbox" id="purple" name="fav_language" value="purple" oninput="ButtonCheck()">
+                        <label style="font-size: 20px;" for="purple">Purple</label>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!-- 2.2. Menu bar for showing product information-->
+    <div style="margin-left: 260px; color: black;">
+        <!-- <p id="demo"> hello</p> -->
+        <table style="border-spacing: 35px;" id="table_menu"></table>
+        
+        <script>
+            var Result_Of_Type = "", Result_Of_Group = "", Result_Of_Brand = "", Result_Of_Price = "", Result_Of_Color = "";
+            loadDoc();
+            function loadDoc() {
+                var TotalLengh = 0; // default value
+                var TotalRow = 0; // default value
+                var TotalColum = 4; // fixed value
+                var RedundantRow = 0; // default value for 
+                var ActualRow = 0;
+                var receivedMessage = "";
+                // document.getElementById("demo").innerHTML = "Changed"; 
+                console.log("passed")
+                const xhttp = new XMLHttpRequest();     // AJAX technique : use to get/post data via HTML page without loading website
+                // xhttp.onload = function() {
+                //     document.getElementById("demo").innerHTML =
+                //     this.responseText;
+                // }
+                xhttp.open("POST", "/candles");
+                xhttp.setRequestHeader( 
+                "Content-Type", "application/json" 
+                ); 
+                var data = JSON.stringify( 
+                    { name: "First_Time_load", email: "abcdef" } 
+                ); 
+                xhttp.send(data);
+                // Create a state change callback 
+                xhttp.onreadystatechange = function () { 
+                    if (xhttp.readyState === 4 && 
+                        xhttp.status === 200) { 
+                        receivedMessage = this.responseText;
+                        receivedMessage = JSON.parse(receivedMessage);
+                        var temp = 0;
+                        let stringtemp = "";
+                        let myarray = "";
+                        const tablemenu = document.querySelector("#table_menu");
+                        // console.log(`Lenght of received info : ${receivedMessage.length}`);
+                        TotalLengh = receivedMessage.length;
+                        TotalRow = TotalLengh/TotalColum;
+                        RedundantRow = TotalLengh%TotalColum;
+                        // console.log(`Lenght of received info : ${RedundantRow}`);
+                        if (RedundantRow == 0){
+                            ActualRow = TotalRow;
+                        }
+                        else {
+                            ActualRow = TotalRow + 1;
+                        }
+                        for(var row = 1;row<=ActualRow;row++){
+                            tablemenu.innerHTML += `<tr id="row${row}"></tr>`;
+                            const fruitsList = document.querySelector(`#row${row}`);
+                            if(RedundantRow != 0 && row == ActualRow){
+                                // odd case, last row (redundant row)
+                                for(var col = 1;col<=RedundantRow;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    fruitsList.innerHTML += `<th><a id="RouteIDA13" href="${"/candle_information/" + myarray}" style="text-decoration: none; color: black;"><img id="DisplayImageA13" src=${receivedMessage[temp].image} width="200" height="200"><p id="DisplayNameA13" style="font-size: 20px;">${receivedMessage[temp].name}</p><p id="DisplayPriceA13" style="font-size: 20px;">${receivedMessage[temp].price}</p></a></th>`;
+                                    temp = temp + 1;
+                                }
+                            }
+                            else {
+                                // Normal case , no odd length
+                                for(var col = 1;col<=TotalColum;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    fruitsList.innerHTML += `<th><a id="RouteIDA13" href="${"/candle_information/" + myarray}" style="text-decoration: none; color: black;"><img id="DisplayImageA13" src=${receivedMessage[temp].image} width="200" height="200"><p id="DisplayNameA13" style="font-size: 20px;">${receivedMessage[temp].name}</p><p id="DisplayPriceA13" style="font-size: 20px;">${receivedMessage[temp].price}</p></a></th>`;
+                                    temp = temp + 1;
+                                }
+                            }
+                        }
+                    } 
+                }; 
+                // setTimeout(loadDoc, 1000); 
+                
+            }
+            function Filter_Product_From_Server(Result_Of_Type, Result_Of_Group, Result_Of_Brand, Result_Of_Price, Result_Of_Color) {
+                var TotalLengh = 0; // default value
+                var TotalRow = 0; // default value
+                var TotalColum = 4; // fixed value
+                var RedundantRow = 0; // default value for 
+                var ActualRow = 0;
+                var receivedMessage = "";
+                // document.getElementById("demo").innerHTML = "Changed"; 
+                console.log("passed")
+                const xhttp = new XMLHttpRequest();
+                // xhttp.onload = function() {
+                //     document.getElementById("demo").innerHTML =
+                //     this.responseText;
+                // }
+                xhttp.open("POST", "/candles");
+                xhttp.setRequestHeader( 
+                "Content-Type", "application/json" 
+                ); 
+                var data = JSON.stringify( 
+                    {   name: "Request_Filter_Product", 
+                        Request_Of_Type: `${Result_Of_Type}`, 
+                        Request_Of_Group: `${Result_Of_Group}`, 
+                        Request_Of_Brand: `${Result_Of_Brand}`, 
+                        Request_Of_Price: `${Result_Of_Price}`, 
+                        Request_Of_Color: `${Result_Of_Color}` 
+                } 
+                ); 
+                xhttp.send(data);
+                // Create a state change callback 
+                xhttp.onreadystatechange = function () { 
+                    if (xhttp.readyState === 4 && 
+                        xhttp.status === 200) { 
+                        receivedMessage = this.responseText;
+                        receivedMessage = JSON.parse(receivedMessage);
+                        var temp = 0;
+                        let stringtemp = "";
+                        let myarray = "";
+                        const tablemenu = document.querySelector("#table_menu");
+                        // console.log(`Lenght of received info : ${receivedMessage.length}`);
+                        TotalLengh = receivedMessage.length;
+                        TotalRow = TotalLengh/TotalColum;
+                        RedundantRow = TotalLengh%TotalColum;
+                        // console.log(`Lenght of received info : ${RedundantRow}`);
+                        if (RedundantRow == 0){
+                            ActualRow = TotalRow;
+                        }
+                        else {
+                            ActualRow = TotalRow + 1;
+                        }
+                        for(var row = 1;row<=ActualRow;row++){
+                            tablemenu.innerHTML += `<tr id="row${row}"></tr>`;
+                            const fruitsList = document.querySelector(`#row${row}`);
+                            if(RedundantRow != 0 && row == ActualRow){
+                                // odd case, last row (redundant row)
+                                for(var col = 1;col<=RedundantRow;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    fruitsList.innerHTML += `<th><a id="RouteIDA13" href="${"/candle_information/" + myarray}" style="text-decoration: none; color: black;"><img id="DisplayImageA13" src=${receivedMessage[temp].image} width="200" height="200"><p id="DisplayNameA13" style="font-size: 20px;">${receivedMessage[temp].name}</p><p id="DisplayPriceA13" style="font-size: 20px;">${receivedMessage[temp].price}</p></a></th>`;
+                                    temp = temp + 1;
+                                }
+                            }
+                            else {
+                                // Normal case , no odd length
+                                for(var col = 1;col<=TotalColum;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    fruitsList.innerHTML += `<th><a id="RouteIDA13" href="${"/candle_information/" + myarray}" style="text-decoration: none; color: black;"><img id="DisplayImageA13" src=${receivedMessage[temp].image} width="200" height="200"><p id="DisplayNameA13" style="font-size: 20px;">${receivedMessage[temp].name}</p><p id="DisplayPriceA13" style="font-size: 20px;">${receivedMessage[temp].price}</p></a></th>`;
+                                    temp = temp + 1;
+                                }
+                            }
+                        }
+                    } 
+                }; 
+                // setTimeout(loadDoc, 1000); 
+                
+            }
+
+            function Add_New_Product() {
+                ClearAvailableTable();
+                // document.getElementById("demo").innerHTML = "Changed"; 
+                console.log("passed");
+                var TotalLengh = 0; // default value
+                var TotalRow = 0; // default value
+                var TotalColum = 4; // fixed value
+                var RedundantRow = 0; // default value for 
+                var ActualRow = 0;
+                var receivedMessage = "";
+                const xhttp = new XMLHttpRequest();
+                // xhttp.onload = function() {
+                //     document.getElementById("demo").innerHTML =
+                //     this.responseText;
+                // }
+                xhttp.open("POST", "/candles");
+                xhttp.setRequestHeader( 
+                "Content-Type", "application/json" 
+                ); 
+                var data = JSON.stringify( 
+                    {   name: "Request_Add_New_Product", 
+                        New_Name: "Lumos Midnight sandalwood", 
+                        New_Type: "oil",
+                        New_Group: "discount",
+                        New_Brand: "no_brand",
+                        New_Price: "600.000",
+                        New_Price_Range: "larger_500KVND",
+                        New_Color: "yellow",
+                        New_Image: "../img/Automation/Image/22.jpg",
+                        
+                } 
+                ); 
+                xhttp.send(data);
+                // Create a state change callback 
+                xhttp.onreadystatechange = function () { 
+                    if (xhttp.readyState === 4 && 
+                        xhttp.status === 200) { 
+                        receivedMessage = this.responseText;
+                        receivedMessage = JSON.parse(receivedMessage);
+                        var temp = 0;
+                        let stringtemp = "";
+                        let myarray = "";
+                        const tablemenu = document.querySelector("#table_menu");
+                        // console.log(`Lenght of received info : ${receivedMessage.length}`);
+                        TotalLengh = receivedMessage.length;
+                        TotalRow = TotalLengh/TotalColum;
+                        RedundantRow = TotalLengh%TotalColum;
+                        // console.log(`Lenght of received info : ${RedundantRow}`);
+                        if (RedundantRow == 0){
+                            ActualRow = TotalRow;
+                        }
+                        else {
+                            ActualRow = TotalRow + 1;
+                        }
+                        for(var row = 1;row<=ActualRow;row++){
+                            tablemenu.innerHTML += `<tr id="row${row}"></tr>`;
+                            const fruitsList = document.querySelector(`#row${row}`);
+                            if(RedundantRow != 0 && row == ActualRow){
+                                // odd case, last row (redundant row)
+                                for(var col = 1;col<=RedundantRow;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    fruitsList.innerHTML += `<th><a id="RouteIDA13" href="${"/candle_information/" + myarray}" style="text-decoration: none; color: black;"><img id="DisplayImageA13" src=${receivedMessage[temp].image} width="200" height="200"><p id="DisplayNameA13" style="font-size: 20px;">${receivedMessage[temp].name}</p><p id="DisplayPriceA13" style="font-size: 20px;">${receivedMessage[temp].price}</p></a></th>`;
+                                    temp = temp + 1;
+                                }
+                            }
+                            else {
+                                // Normal case , no odd length
+                                for(var col = 1;col<=TotalColum;col++){
+                                    stringtemp = `${receivedMessage[temp].name}`;
+                                    myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                                    fruitsList.innerHTML += `<th><a id="RouteIDA13" href="${"/candle_information/" + myarray}" style="text-decoration: none; color: black;"><img id="DisplayImageA13" src=${receivedMessage[temp].image} width="200" height="200"><p id="DisplayNameA13" style="font-size: 20px;">${receivedMessage[temp].name}</p><p id="DisplayPriceA13" style="font-size: 20px;">${receivedMessage[temp].price}</p></a></th>`;
+                                    temp = temp + 1;
+                                }
+                            }
+                        }
+                    } 
+                }; 
+                
+            }
+            function ClearAvailableTable(){
+                const tablemenu = document.getElementById("table_menu");
+                tablemenu.textContent = "";
+            }
+            function ButtonCheck(){
+                ClearAvailableTable();
+                var Number_Of_A = 0, Number_Of_B = 0, Number_Of_C = 0, Number_Of_D = 0, Number_Of_E = 0;
+                var Filter_Of_A= [], Filter_Of_B= [], Filter_Of_C= [], Filter_Of_D= [], Filter_Of_E= [];
+
+                var A = [
+                    (document.getElementById("candle").checked) ? "candle":"", // A1
+                    (document.getElementById("oil").checked) ? "oil":"", // A2
+                    (document.getElementById("accessory").checked) ? "accessory":"", // A3
+                    (document.getElementById("gift").checked) ? "gift":"" // A4
+                ]
+                var B =[
+                    (document.getElementById("best_saler").checked)?"best_seller":"", //B1
+                    (document.getElementById("discount").checked)?"discount":"", // B2
+                    (document.getElementById("new_arrival").checked)?"new_arrival":"", // B3
+                    (document.getElementById("sweet_fruit").checked)?"sweet_fruit":"", // B4
+                    (document.getElementById("wood_men").checked)?"wood_men":"", // B5
+                    (document.getElementById("fresh_relax").checked)?"fresh_relax":"", // B6
+                    (document.getElementById("flower_herb").checked)?"flower_herb":"" // B7
+                ]
+                var C = [
+                    (document.getElementById("lumos").checked)?"lumos":"", // C1
+                    (document.getElementById("citta").checked)?"citta":"", // C2
+                    (document.getElementById("no_brand").checked)?"no_brand":"" // C3
+                ]
+                var D = [
+                    (document.getElementById("smaller_100KVND").checked)?"smaller_100KVND":"", // D1
+                    (document.getElementById("100KVND_to_200KVND").checked)?"100KVND_to_200KVND":"", // D2
+                    (document.getElementById("200KVND_to_300KVND").checked)?"200KVND_to_300KVND":"", // D3
+                    (document.getElementById("300KVND_to_500KVND").checked)?"300KVND_to_500KVND":"", // D4
+                    (document.getElementById("larger_500KVND").checked)?"larger_500KVND":"" // D5
+
+                ]
+                var E = [
+                    (document.getElementById("black").checked)?"black":"", // E1
+                    (document.getElementById("white").checked)?"white":"", // E2
+                    (document.getElementById("red").checked)?"red":"", // E3
+                    (document.getElementById("pink").checked)?"pink":"", // E4
+                    (document.getElementById("blue").checked)?"blue":"", // E5
+                    (document.getElementById("green").checked)?"green":"", // E6
+                    (document.getElementById("yellow").checked)?"yellow":"", // E7
+                    (document.getElementById("orange").checked)?"orange":"", // E8
+                    (document.getElementById("purple").checked)?"purple":"" // E9
+                ]
+                for(let i = 0; i<4;i++){
+                    if(A[i] != ""){
+                        Filter_Of_A[Number_Of_A] = A[i];   
+                        Number_Of_A++;
+                    }
+                    // console.log(`Result of A${i+1} is`,A[i]);
+                }
+                if(Number_Of_A != 0){
+                    Result_Of_Type = Filter_Of_A;
+                }
+                else {
+                    // Result_Of_Type = "A1 || A2 || A3 || A4";
+                    Result_Of_Type = ["candle","oil","accessory","gift"];
+                    // Result_Of_Type = ["A1","A2","A3","A4"];
+                }
+                console.log("Result of A",Result_Of_Type);
+
+                for(let i = 0; i<7;i++){
+                    if(B[i] != ""){
+                        Filter_Of_B[Number_Of_B] = B[i];   
+                        Number_Of_B++;
+                    }
+                    // console.log(`Result of B${i+1} is`,B[i]);
+                }
+                if (Number_Of_B !=0){
+                    Result_Of_Group = Filter_Of_B;
+                }
+                else {
+                    Result_Of_Group = ["best_seller","discount","new_arrival","sweet_fruit","wood_men","fresh_relax","flower_herb"];
+                    // Result_Of_Group = "B1 || B2 || B3 || B4 || B5 || B6 || B7";
+                }
+                console.log("Result of B",Result_Of_Group);
+                for(let i = 0; i<3;i++){
+                    if(C[i] != ""){
+                        Filter_Of_C[Number_Of_C] = C[i];   
+                        Number_Of_C++;
+                    }
+                    // console.log(`Result of C${i+1} is`,C[i]);
+                }
+                if (Number_Of_C !=0){
+                    Result_Of_Brand = Filter_Of_C;
+                } 
+                else {
+                    Result_Of_Brand = ["lumos","citta","no_brand"];
+                    // Result_Of_Brand = "C1 || C2 || C3";
+                }
+
+                for(let i = 0; i<5;i++){
+                    if(D[i] != ""){
+                        Filter_Of_D[Number_Of_D] = D[i];   
+                        Number_Of_D++;
+                    }
+                    // console.log(`Result of D${i+1} is`,D[i]);
+                }
+                if (Number_Of_D !=0){
+                    Result_Of_Price = Filter_Of_D;
+                } 
+                else {
+                    Result_Of_Price = ["smaller_100KVND","100KVND_to_200KVND","200KVND_to_300KVND","300KVND_to_500KVND","larger_500KVND"];
+                    // Result_Of_Price = "D1 || D2 || D3 || D4 || D5";
+                }
+
+                for(let i = 0; i<9;i++){
+                    if(E[i] != ""){
+                        Filter_Of_E[Number_Of_E] = E[i];   
+                        Number_Of_E++;
+                    }
+                    // console.log(`Result of E${i+1} is`,E[i]);
+                }
+                if (Number_Of_E != 0){
+                    Result_Of_Color = Filter_Of_E;
+                } 
+                else {
+                    Result_Of_Color = ["black","white","red","pink","blue","green","yellow","orange","purple"];
+                    // Result_Of_Color = "E1 || E2 || E3 || E4 || E5 || E6 || E7";
+                } 
+                
+                console.log(`A = ${Result_Of_Type}`);
+                console.log(`B = ${Result_Of_Group}`);
+                console.log(`C = ${Result_Of_Brand}`);
+                console.log(`D = ${Result_Of_Price}`);
+                console.log(`E = ${Result_Of_Color}`);
+                Filter_Product_From_Server(Result_Of_Type,Result_Of_Group,Result_Of_Brand,Result_Of_Price,Result_Of_Color);
+            }
+            
+        </script>
+    </div>
+</div>

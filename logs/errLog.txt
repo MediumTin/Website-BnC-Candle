@@ -166,3 +166,31 @@
 20240915	15:16:30	974bcc88-0963-4ab8-8ea3-ae937ef6161b	TypeError: CheckAdminRight is not a function
 20240922	02:43:29	ecd60224-21ea-490c-ba78-8c0757e078ca	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\'views\Candle_Web_Routes\HomePage.html''
 20240922	16:07:58	24c4915d-e534-4113-a475-10921f2b129f	Error: Can't set headers after they are sent.
+20241003	09:27:28	0dc07f8e-9899-4512-ad9d-6380d6d6bb3c	Error: Failed to lookup view "home2" in views directory "./views/Example_Express_Handlebar"
+20241004	08:08:17	c325de2e-bd5d-4112-9f4d-5905a021980d	Error: Cannot find module 'html'
+Require stack:
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\view.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\application.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\express.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\index.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\server.js
+20241004	08:10:44	37d15435-d3dd-48e4-b1fa-48491febf1d0	Error: Cannot find module 'html'
+Require stack:
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\view.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\application.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\express.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\index.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\server.js
+20241004	08:10:47	ca3ad938-35d2-49e5-87b2-82ec998fe449	Error: Cannot find module 'html'
+Require stack:
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\view.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\application.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\lib\express.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\node_modules\express\index.js
+- D:\Website_NenThomBnC\Website_NenThomBnC\server.js
+20241004	08:11:38	3538e0e1-599a-4548-952c-9e7f82957cea	Error: Failed to lookup view "Search_And_Filtering_Product" in views directory "./views/Candle_Web_Routes"
+20241004	08:12:01	b5c20dc7-0a89-45e6-b31c-1a8bd24a19cc	Error: Failed to lookup view "Search_And_Filtering_Product" in views directory "./views/Candle_Web_Routes"
+20241004	08:19:58	a71ef57f-e7a2-4e92-a3e9-f9152f9186e4	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
+20241004	09:28:41	11f29997-9bd1-4784-b53d-cf52ee919c68	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
+20241004	09:28:46	25ee2bfa-1839-4b9b-b318-9907e0786329	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
+20241004	09:30:54	a64f1c6b-bd57-4364-b707-737e3932faf0	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'

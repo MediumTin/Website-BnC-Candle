@@ -12,8 +12,16 @@ const verifyJWT = require('./middleware/verifyJWT.js');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn.js');
+const expressHb = require('express-handlebars');
+// import { engine } from 'express-handlebars';
 const PORT = process.env.PORT || 3500;
 const RedisPort = PORT;
+
+// to connect express to handlbar
+app.engine('handlebars', expressHb.engine());
+app.set('view engine', 'handlebars');
+// app.set('views', './views/Example_Express_Handlebar');
+app.set('views', './views/Candle_Web_Routes');
 
 const client = redis.createClient();
 // client.connect();
@@ -47,6 +55,7 @@ console.log("Program is running ----------");
 
 
 app.use('/',require('./routes/Candle_Web_Routes/HomePageRoute'));
+
 app.use('/candles',require('./routes/Candle_Web_Routes/Candles'));
 // app.get('/candles', (req, res) => {
 //     const data = ['Location 1', 'Location 2']; // Your data here

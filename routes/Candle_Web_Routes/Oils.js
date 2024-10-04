@@ -8,10 +8,9 @@ const client = createClient();  // Create a Redis client
 
 // Process with router
 Router.get('/',(req,res)=>{
-    // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Oils.html'));
    // res.clearCookie("oils"); // Xoa redundant cookie in JS script
-   res.cookie("type","oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product.html'));
-   // res.cookie("type","oils").status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product.html'));
+   res.cookie("type","oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).render('Search_And_Filtering_Product');
+   // res.cookie("type","oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product.html'));
    // expire time in 10 second
    })
 
