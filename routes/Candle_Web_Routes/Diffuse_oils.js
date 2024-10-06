@@ -6,7 +6,9 @@ const path = require('path');
 // Process with router
 Router.get('/',(req,res)=>{
     // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Diffuse_oils.html'));
-    res.cookie("type","diffuse_oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).render('Search_And_Filtering_Product');
+    res.status(200).render('Search_And_Filtering_Product',{
+        Request_From_Header : "diffuse_oils"
+     });
 })
 
 // Export router to common usage

@@ -172,6 +172,7 @@
                 </table>
             </form>
         </div>
+        <h1 id="RequestHeader" style="display:none">{{Request_From_Header}}</h1>
         <!-- 2.2. Menu bar for showing product information-->
         <div style="margin-left: 260px; color: black;">
             <!-- <p id="demo"> hello</p> -->
@@ -179,12 +180,15 @@
             
             <script>
                 var Result_Of_Type = "", Result_Of_Group = "", Result_Of_Brand = "", Result_Of_Price = "", Result_Of_Color = "";
-                const Check_Cookie_Request_From_Server = () =>{
-                    var cookie_Value = (document.cookie);
-                    var split_cookie = cookie_Value.split("=");
-                    var LOC_id_cookie_from_server = split_cookie[1];
-                    var LOC_Requet_Cookie = LOC_id_cookie_from_server;
-                    return LOC_Requet_Cookie;
+                const Check_Header_Request_From_Server = (header_request) =>{
+                    // Use cookies for diferentiate HTML pages, NOT GOOD, dont exact use cases of Cookies
+                    // Improvement point
+                    //var cookie_Value = (document.cookie);
+                    //var split_cookie = cookie_Value.split("=");
+                    //var LOC_id_cookie_from_server = split_cookie[1];
+                    //var LOC_Requet_Cookie = LOC_id_cookie_from_server;
+                    var LOC_header_request = header_request;
+                    return LOC_header_request;
                 }
                 
                 function expire_time()
@@ -204,7 +208,7 @@
                     // document.getElementById("demo").innerHTML = "Changed"; 
                     
                     console.log("passed");
-                    // var id_cookie_from_server =  Check_Cookie_Request_From_Server();
+                    // var id_cookie_from_server =  Check_Header_Request_From_Server();
                     console.log(`Cookie is ${id_cookie_from_server}`);
                     const xhttp = new XMLHttpRequest();     // AJAX technique : use to get/post data via HTML page without loading website
                     // xhttp.onload = function() {
@@ -355,9 +359,9 @@
                     tablemenu.textContent = "";
                 }  
 
-                const set_Button_Initial_Value = (Request_Cookie) => {
+                const set_Button_Initial_Value = (Request_Header) => {
                     var LOC_Result = 0;
-                    switch (Request_Cookie) {
+                    switch (Request_Header) {
                         case "candles":
                             // code block
                             document.getElementById("candle").checked = true;
@@ -533,9 +537,11 @@
                 
                 // Initial task
                 function Init_task(){
-                    var Request_Cookie = Check_Cookie_Request_From_Server(); // Check cookie to indentify specific request
-                    console.log(`Cookie is ${Request_Cookie}`);
-                    var result_Button_Checking = set_Button_Initial_Value(Request_Cookie); // check properties of this filter firstly
+                    const Request_From_Header = document.getElementById('RequestHeader').innerHTML;
+                    console.log(`Request file from server is: ${Request_From_Header}`);
+                    var Request_Header = Check_Header_Request_From_Server(Request_From_Header); // Check cookie to indentify specific request
+                    console.log(`Cookie is ${Request_Header}`);
+                    var result_Button_Checking = set_Button_Initial_Value(Request_Header); // check properties of this filter firstly
                     if(result_Button_Checking){
                         ButtonCheck();
                     } else {

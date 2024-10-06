@@ -6,7 +6,9 @@ const path = require('path');
 // Process with router
 Router.get('/',(req,res)=>{
     // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Natural_oils.html'));
-    res.cookie("type","natural_oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).render('Search_And_Filtering_Product');
+    res.render('Search_And_Filtering_Product',{
+        Request_From_Header : "natural_oils"
+     });
 })
 
 // Export router to common usage

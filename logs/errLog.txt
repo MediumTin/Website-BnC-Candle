@@ -194,3 +194,5 @@ Require stack:
 20241004	09:28:41	11f29997-9bd1-4784-b53d-cf52ee919c68	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
 20241004	09:28:46	25ee2bfa-1839-4b9b-b318-9907e0786329	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
 20241004	09:30:54	a64f1c6b-bd57-4364-b707-737e3932faf0	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
+20241005	15:26:52	12572f28-0bac-4ecd-8ee3-68da27e33c27	ReferenceError: CurrentUser is not defined
+20241005	15:41:47	cd544bd1-525c-4cff-a133-038620e4163e	Error: Cannot set headers after they are sent to the client

@@ -6,7 +6,9 @@ const path = require('path');
 // Process with router
 Router.get('/',(req,res)=>{
     // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Gift.html'));
-    res.cookie("type","gifts",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).render('Search_And_Filtering_Product');
+    res.status(200).render('Search_And_Filtering_Product',{
+        Request_From_Header : "gifts"
+     });
 })
 
 // Export router to common usage

@@ -8,6 +8,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const Menu_Candle_Processing = require('../../controllers/Website_Candle_Light/Menu_Candle_Processing_MongooseDB');
 const User_Information_Handling = require('../../controllers/Website_Candle_Light/User_Information_Handling');
 // var result = "";
+
+const sessions = {};
 Router.get('^/$|',(req,res)=>{
    res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Detail_Product','Boostrap_Login_Form.html'));
 })
@@ -36,10 +38,23 @@ Router.post('/register',(req,res)=>{
 const LoginHandling = async(req,res) => {
    var [isValidUser, isAdminRight] = await User_Information_Handling.Check_Valid_User_in_Database(req.body.username, req.body.password);
    console.log(`isValidUser is ${isValidUser}`);
+   var CurrentUser = req.body.username;
    if(isAdminRight){
-      res.redirect('/candles/adminright');
+      res.render('Search_And_Filtering_Product_AdminRight',{
+         account : `${CurrentUser}`
+      });
    } else if (isValidUser) { 
-      res.redirect('/candles');
+      const sessionId = Date.now().toString();
+      sessions[sessionId] = {
+         userId: req.body.username,
+      };
+      // console.log(`Session ID is : ${sessions}`);
+      console.log(sessions);  
+      res.setHeader('Set-Cookie',`sessionId=${sessionId}; max-age=3600;httpOnly`).redirect('/'); // sent sessionID and redirect to Home Page
+      // res.render('Search_And_Filtering_Product',{
+      //    account : `${CurrentUser}`
+      // });
+      // res.redirect('/candles');
    } else {
       // res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Detail_Product','Boostrap_Login_Form.html'));
       res.redirect('/login_handling');

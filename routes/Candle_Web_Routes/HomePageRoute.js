@@ -11,10 +11,7 @@ const { createClient } = require('redis');
 Router.get('/',(req,res)=>{
     var data = "NTT";
     // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','HomePage.html'));
-    res.render('HomePage',{
-        data : "hello 12",
-        data2 : 4092001
-    });
+    res.render('HomePage');
     //Refer to Body 1
     // res.render('HomePage');
 })
