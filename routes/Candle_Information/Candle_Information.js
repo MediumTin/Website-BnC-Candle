@@ -21,7 +21,7 @@ Router.get('^/$|',async (req,res)=>{
       temp = listofcandle[i].name;
       temp = temp.replaceAll(" ","_");
       temp1 = `${"/"+temp}`;
-      // console.log(`tempt is ${temp1}`);
+      // console.log(`tempt is ${temp1}`); ok
       // console.log(`req.url is ${req.url}`);
       if(req.url == temp1){
          result = listofcandle[i]; // send the selected candle information to html page
