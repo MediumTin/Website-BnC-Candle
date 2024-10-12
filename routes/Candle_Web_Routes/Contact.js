@@ -5,7 +5,16 @@ const path = require('path');
 
 // Process with router
 Router.get('/',(req,res)=>{
-    res.render('Contact');
+    var isSessionValid = req.session.personal_information; // Check session is exist or not
+    if(isSessionValid != undefined){
+        var CurrentUser = req.session.personal_information.username;
+        res.render('Contact',{
+            account : `${CurrentUser}`
+        });
+    } else {
+        // Session is timeout -> Request login again
+        res.redirect('/login_handling');
+    }
 })
 
 // Export router to common usage

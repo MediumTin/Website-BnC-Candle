@@ -4,16 +4,34 @@ const Router = express.Router();
 const path = require('path');
 const Redis_API = require('../../controllers/API_with_Redis/API_Redis');
 const expressHb = require('express-handlebars');
+const cookieParser = require('cookie-parser');
+// // Declare liberies for express-session
+// const session = require('express-session');
+// const Redis = require('ioredis');
+// const RedisStore = require('connect-redis').default;
+// const clientRedis = new Redis(); // defaut localhost
+// const TargetTime_Of_Minute = 1;
+// var TargetTime_Of_Milisecond = TargetTime_Of_Minute*60*1000;
 
 const { createClient } = require('redis');
-
+// Router.use(cookieParser());
 // Process with router
 Router.get('/',(req,res)=>{
     var data = "NTT";
+    // console.log(`REQUEST COOKIE IS ${req.cookies}`);
     // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','HomePage.html'));
-    res.render('HomePage');
-    //Refer to Body 1
-    // res.render('HomePage');
+    var isSessionValid = req.session.personal_information; // Check session is exist or not
+    if(isSessionValid != undefined){
+        // Session is normal - Keep current HTML page
+        var CurrentUser = req.session.personal_information.username;
+        res.render('HomePage',{
+            account : `${CurrentUser}`
+        });
+    } else {
+        // Session is timeout -> Request login again
+        res.redirect('/login_handling');
+    }
+ 
 })
 
 // Process with some API in Redis

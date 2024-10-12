@@ -75,21 +75,36 @@ Router.post('/addnewproduct',async (req,res)=>{
 Router.get('/',(req,res)=>{
    isAdminRightChecked = 0;
    //  res.cookie("type","candles",{ expires: new Date(Date.now() + (7*3600000+5000)) }).status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product.html'));
-   res.status(200).render('Search_And_Filtering_Product',{
-      Request_From_Header : "candles"
-   });
+   var isSessionValid = req.session.personal_information;
+   if(isSessionValid != undefined){
+      var CurrentUser = req.session.personal_information.username;
+      res.status(200).render('Search_And_Filtering_Product',{
+      Request_From_Header : "candles",
+      account : `${CurrentUser}`
+      });
+   } else {
+      // Session is timeout -> Request login again
+      res.redirect('/login_handling');
+   }
+   
 })
 
-// // Process with router
-// Router.get('/adminright',(req,res)=>{
-//    isAdminRightChecked = 1;
-//    // res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product_AdminRight.html'));
-//    res.status(200).render('Search_And_Filtering_Product_AdminRight',{
-//       account : "Trung Tin"
-//    });
-//   //  res.send({ samplearray2 }); // Return data as JSON
+// Process with router
+Router.get('/adminright',(req,res)=>{
+   isAdminRightChecked = 1;
+   var isSessionValid = req.session.personal_information; // Check session is exist or not
+   if(isSessionValid != undefined){
+      var CurrentUser = req.session.personal_information.username;
+      // res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product_AdminRight.html'));
+      res.status(200).render('Search_And_Filtering_Product_AdminRight',{
+         account : `${CurrentUser}`
+      });
+   } else {
+      // Session is timeout -> Request login again
+      res.redirect('/login_handling');
+   }
    
-// })
+})
 
 const Set_Data_From_Database_To_RedisCache = async (key,data) => {
    const Result_Of_Update_DB = await Redis_API.Set_Data_To_Redis(client,key,data);

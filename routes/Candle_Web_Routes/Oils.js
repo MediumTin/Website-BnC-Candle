@@ -9,12 +9,21 @@ const client = createClient();  // Create a Redis client
 // Process with router
 Router.get('/',(req,res)=>{
    // res.clearCookie("oils"); // Xoa redundant cookie in JS script
-   res.status(200).render('Search_And_Filtering_Product',{
-      Request_From_Header : "oils"
-   });
-   // res.cookie("type","oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product.html'));
-   // expire time in 10 second
+   var isSessionValid = req.session.personal_information;
+   if(isSessionValid != undefined){
+      var CurrentUser = req.session.personal_information.username;
+      res.status(200).render('Search_And_Filtering_Product',{
+         Request_From_Header : "oils",
+         account : `${CurrentUser}`
+      });
+   } else {
+      // Session is timeout -> Request login again
+      res.redirect('/login_handling');
+   }
+      // res.cookie("type","oils",{ expires: new Date(Date.now() + (7*3600000+5000))}).status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','Search_And_Filtering_Product.html'));
+      // expire time in 10 second
    })
+      
 
 // Use this code if using seperated Redis request
 // Router.post('/',async (req,res)=>{

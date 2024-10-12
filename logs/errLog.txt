@@ -196,3 +196,46 @@ Require stack:
 20241004	09:30:54	a64f1c6b-bd57-4364-b707-737e3932faf0	Error: ENOENT: no such file or directory, stat 'D:\Website_NenThomBnC\Website_NenThomBnC\views\Candle_Web_Routes\Search_And_Filtering_Product.html'
 20241005	15:26:52	12572f28-0bac-4ecd-8ee3-68da27e33c27	ReferenceError: CurrentUser is not defined
 20241005	15:41:47	cd544bd1-525c-4cff-a133-038620e4163e	Error: Cannot set headers after they are sent to the client
+20241007	16:48:22	8a1522fe-da51-4fe7-a6a0-daa84e563490	TypeError: Cannot convert object to primitive value
+20241007	16:48:26	c67f94a9-d7fa-46cc-8924-e46e68a958e4	TypeError: Cannot convert object to primitive value
+20241007	16:48:42	ae98a475-7085-486c-9f23-60c3c062f70b	TypeError: Cannot convert object to primitive value
+20241007	16:52:28	f076ecfc-28a7-40a0-8d6f-a8665bc2fcf4	TypeError: Cannot convert object to primitive value
+20241007	16:57:30	3735d2ca-d9b7-49b4-8d91-b56a65e0d23d	TypeError: Cannot convert object to primitive value
+20241007	17:01:50	8a790394-fee0-483a-b2bf-536969110a2e	TypeError: Cannot convert object to primitive value
+20241007	23:18:36	2b049ea9-79b3-4992-9612-0b7716913a24	TypeError: Cannot convert object to primitive value
+20241007	23:19:54	2ecbf1a6-a738-4310-802e-2e09cdbcd13a	TypeError: Cannot convert object to primitive value
+20241010	00:56:37	c5f713a7-1154-4425-8d21-19aae7c5fd09	TypeError: maxAge must be a number or Date
+20241010	00:58:41	12a799c4-0336-41e4-8e23-075c7c0b85a8	TypeError: maxAge must be a number or Date
+20241010	01:01:49	c2c41f5e-2bef-4219-b2ea-5b5abcfc387b	TypeError: maxAge must be a number or Date
+20241010	01:01:53	85b3eb61-1e62-4580-9861-d0680d68114e	TypeError: maxAge must be a number or Date
+20241010	01:07:07	a53a5926-d619-4e81-b4de-4173ff344b74	TypeError: maxAge must be a number or Date
+20241010	01:07:11	92ec3f1f-726a-4e0a-9caa-6ee8ece024bc	TypeError: maxAge must be a number or Date
+20241010	01:07:28	0ee22bff-0eec-4a09-86fa-fb08eed44b2a	TypeError: maxAge must be a number or Date
+20241010	01:15:06	5a594a36-44d1-4487-aa43-475ee8b6260b	TypeError: maxAge must be a number or Date
+20241010	01:15:33	1ec29a2a-bfe3-4b1b-b56b-14544c3cb151	TypeError: maxAge must be a number or Date
+20241010	01:15:35	404a1e9e-f69d-455d-bdb0-fde257871633	TypeError: maxAge must be a number or Date
+20241010	23:57:45	0b9929e1-2a20-4a02-a843-4da99c57a916	TypeError: Cannot set properties of undefined (setting 'user')
+20241011	01:05:14	05e4d55c-f5a5-48a7-91d7-914ce3bb3253	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:14	236a5487-6ad3-4df3-990b-907accff45d0	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:14	da8d5842-9e38-436a-a4f6-563e3beb42a3	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:15	0ed01267-261f-41ec-9ebb-4cdb1906bc4c	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:15	5228e5c2-cf1f-4e50-8546-827f5a2a342b	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:15	9ccfd3b9-d461-46ba-a480-b7f0974d2309	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:20	106f4d61-23ec-4945-aecc-1e3f3c22ab27	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:20	c0817e8b-972f-4b96-a774-09a06e155ba1	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:20	cba9281a-3a4f-49c0-9909-518ebd391a61	TypeError: Cannot read properties of undefined (reading 'sid')
+20241011	01:05:50	65a65d7b-833c-4c9f-ba3e-5d7581cf18eb	TypeError: Cannot read properties of undefined (reading 'sid')
+20241013	01:50:35	cfdec93f-065a-4023-9eda-d2b6594832f6	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	02:30:38	836c5e06-e86a-40c0-b5e8-5041f8a5f744	Error: Cannot set headers after they are sent to the client
+20241013	02:46:15	1273b278-67dd-40d2-98f2-f5fbac37c891	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	02:46:37	e2181308-cf8d-4fb2-94e8-4d6ead8783e1	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	02:46:56	3b8c4a6d-1d2b-42bc-878e-81146980ccd6	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	02:47:06	456efbb4-8e8b-47b2-8654-5079752d1474	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:04:14	68e3d75b-8f86-4391-ad2b-08086232e124	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:05:59	f86ed408-9946-4870-a117-e9a5cf86c3f7	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:06:08	2dedf618-503f-4097-8e7c-eefaac1c2af3	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:06:29	711a0674-20f9-459d-b16c-04aa9336bc9c	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:07:13	f2231f91-eda1-4610-bb69-00c150c00b4f	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:14:33	8756c4e1-019e-4f2c-bb2a-05c905669075	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:23:15	9357a857-e308-4f3b-87f1-1d1d18660945	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	03:29:25	22a8cf37-3674-42bc-92c1-c42f0b5f13ab	TypeError: Cannot read properties of undefined (reading 'username')

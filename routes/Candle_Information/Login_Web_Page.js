@@ -3,10 +3,21 @@ const express = require('express');
 const Router = express.Router();
 const path = require('path');
 var bodyParser = require('body-parser');
+const cookieParser = require("cookie-parser");
 var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const Menu_Candle_Processing = require('../../controllers/Website_Candle_Light/Menu_Candle_Processing_MongooseDB');
 const User_Information_Handling = require('../../controllers/Website_Candle_Light/User_Information_Handling');
+
+// Declare liberies for express-session
+const session = require('express-session');
+const Redis = require('ioredis');
+const RedisStore = require('connect-redis').default;
+const clientRedis = new Redis(); // defaut localhost
+const TargetTime_Of_Minute = 1;
+var TargetTime_Of_Milisecond = TargetTime_Of_Minute*60*1000;
+
+
 // var result = "";
 
 const sessions = {};
@@ -40,17 +51,50 @@ const LoginHandling = async(req,res) => {
    console.log(`isValidUser is ${isValidUser}`);
    var CurrentUser = req.body.username;
    if(isAdminRight){
-      res.render('Search_And_Filtering_Product_AdminRight',{
-         account : `${CurrentUser}`
-      });
-   } else if (isValidUser) { 
-      const sessionId = Date.now().toString();
-      sessions[sessionId] = {
-         userId: req.body.username,
+      req.session.personal_information ={
+         username: req.body.username,
+         password: req.body.password,
+         age: 23,
+         address : "Admin",
+         sex: "Admin",
+         member_type: "Admin",
+         email: "admin@gmail.com"
       };
+      req.session.payment_information ={
+            smart_banking : "Admin",
+            momo : "Admin"
+      };
+      // res.render('Search_And_Filtering_Product_AdminRight',{
+      //    account : `${CurrentUser}`
+      // });
+      res.redirect('/candles/adminright');
+   } else if (isValidUser) { 
+      // Set new session for valid user
+
+      // Way 1: Manual code based on Javascript
+      // const sessionId = Date.now().toString();
+      // sessions[sessionId] = {
+      //    userId: req.body.username,
+      // };
       // console.log(`Session ID is : ${sessions}`);
-      console.log(sessions);  
-      res.setHeader('Set-Cookie',`sessionId=${sessionId}; max-age=3600;httpOnly`).redirect('/'); // sent sessionID and redirect to Home Page
+      // res.setHeader('Set-Cookie',`sessionId=${sessionId}; max-age=3600;httpOnly`).redirect('/'); // sent sessionID and redirect to Home Page
+      
+      // Way 2: Using express-session library
+      req.session.personal_information ={
+         username: req.body.username,
+         password: req.body.password,
+         age: 23,
+         address : "Huynh Tan Phat",
+         sex: "Women",
+         member_type: "VIP",
+         email: "tranbichngoc22112001@gmail.com"
+      };
+      req.session.payment_information ={
+            smart_banking : "Vietinbank",
+            momo : "0826780002"
+      };
+      res.redirect('/');
+      
       // res.render('Search_And_Filtering_Product',{
       //    account : `${CurrentUser}`
       // });

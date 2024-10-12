@@ -13,9 +13,29 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn.js');
 const expressHb = require('express-handlebars');
+const session = require('express-session');
+const Redis = require('ioredis');
+const RedisStore = require('connect-redis').default;
+const clientRedis = new Redis(); // defaut localhost
 // import { engine } from 'express-handlebars';
 const PORT = process.env.PORT || 3500;
 const RedisPort = PORT;
+const TargetTime_Of_Minute = 1;
+var TargetTime_Of_Milisecond = TargetTime_Of_Minute*60*1000;
+
+// Example using session middleware
+app.use(session({
+    secret : 'mediumtin',
+    store : new RedisStore({client: clientRedis}), // Store SID or session of user into Redis cache
+    resave : false,
+    saveUninitialized: true, // Properties for re-create Cookies and send to Client
+    cookie : {
+        secure: false,
+        httpOnly: true, // allow client can know document.cookie or not
+        // expires: (new Date(Date.now() + TargetTime_Of_Milisecond + 7*60*60*1000)),
+        maxAge : TargetTime_Of_Milisecond // 1 minute
+    }
+}))
 
 // to connect express to handlbar
 app.engine('handlebars', expressHb.engine());
@@ -55,6 +75,16 @@ console.log("Program is running ----------");
 
 
 app.use('/',require('./routes/Candle_Web_Routes/HomePageRoute'));
+// app.get('/',(req,res)=>{
+//     console.log(`REQUEST COOKIE IS ${req.cookies}`);
+// })
+
+// // example about express session
+app.get('/get-session', (req,res)=>{
+    res.send(req.session); // req.session.user.username
+    console.log(`Cookie is ${req.cookie}`); // req.session.cookie.maxAge
+    // Session will have 2 part : 1 is Cookie info and 2,3,4,... is data
+})
 
 app.use('/candles',require('./routes/Candle_Web_Routes/Candles'));
 // app.get('/candles', (req, res) => {
@@ -92,6 +122,7 @@ app.use('/employees',require('./routes/api/employees')); //example create one AP
 //---------------------------------------Error recognition and connection declaration-----------------------//
 // 1.7. Custom Middleware for logging error request/response between server and client
 app.use(errorHandler);
+
 // Method is used to start a web server and listen for connections on a specified host and port
 mongoose.connection.once('open',()=>{
     console.log('Connected to MongooseDB');
