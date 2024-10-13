@@ -7,12 +7,53 @@
                     <th><a href="../candles">Candles</a></th>
                     <th>
                         <!-- <a href="#oil">Oils</a> -->
-                        <div class="dropdown">
-                            <button class="dropbtn">
+                        <style>
+                            .dropdown2 {
+                                float: left;
+                                overflow: hidden;
+                            }
+                            .dropdown-content2 {
+                                display: none;
+                                position: absolute;
+                                background-color: #f9f9f9;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                z-index: 1;
+                            }
+                            .dropdown-content2 a {
+                                float: none;
+                                color: black;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+                            .dropdown-content2 a:hover {
+                                background-color: #ddd;
+                            }
+                            .dropdown2 .dropbtn2 {
+                                font-size: 18px;  
+                                border: none;
+                                outline: none;
+                                color: white;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font-family: inherit;
+                                margin: 0;
+                            }
+                            .dropdown2:hover .dropbtn2 {
+                                background-color: #FF0066;
+                            }
+                            .dropdown2:hover .dropdown-content2 {
+                                display: block;
+                            }
+                        </style>
+                        <div class="dropdown2">
+                            <button class="dropbtn2">
                                 <a href="../oils">Oils</a>   
                                 <i class="fa fa-caret-down"></i>
                             </button>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content2">
                                 <a href="../diffuse_oils">Diffuse Oils</a>
                                 <a href="../natural_oils">Natural Oils</a>
                             </div>
@@ -20,12 +61,12 @@
                     </th>
                     <th>
                         <!-- <a href="#accessory">Accessory</a> -->
-                        <div class="dropdown">
-                            <button class="dropbtn">
+                        <div class="dropdown2">
+                            <button class="dropbtn2">
                                 <a href="../accessory">Accessory</a>
                                 <i class="fa fa-caret-down"></i>
                             </button>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content2">
                                 <a href="../burn_candles">Burn Candles</a>
                                 <a href="../care_candles">Care Candles</a>
                             </div>
