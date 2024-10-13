@@ -19,7 +19,7 @@ const { createClient } = require('redis');
 Router.get('/',(req,res)=>{
     var data = "NTT";
     // console.log(`REQUEST COOKIE IS ${req.cookies}`);
-    // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','HomePage.html'));
+    // res.sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','testHTML.html'));
     var isSessionValid = req.session.personal_information; // Check session is exist or not
     if(isSessionValid != undefined){
         // Session is normal - Keep current HTML page

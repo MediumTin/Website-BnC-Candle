@@ -118,13 +118,19 @@
             background-color: #1CA347;
             border-color: #1CA347;
         } 
+        .text_custom {
+            font-size: 13px;
+            border-style: solid;
+            height:40px ;
+            width: 80px;
+        }
         </style>
 </head>
 
 <body>
     
     <!-- 1. Search bar and Navigation bar in header page. -->
-    <div class="div-footer;" style="background-color: white;">
+    <div class="div-footer2;" style="background-color: white;">
         <!-- Describe search bar and logo -->
         <table class="table1">
             <tr style="width: 50%;">
@@ -138,7 +144,7 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </th> -->
                 <td>
-                    <div class="search-container">
+                    <div class="search-container2">
                         <form action="/action_page.php">
                           <input type="text" placeholder="Search your product..." name="search" style="height:40px ;width:400px;">
                           <button type="submit" style="height:40px ;width: 50px;"><i class="fa fa-search"></i></button>
@@ -146,11 +152,11 @@
                     </div>
                 </td>
                 <td style="color:black;">
-                    <button style="height:40px ;width: 80px;">Shopping bag</button>
+                    <button class="text_custom">Shopping bag</button>
                 </td>
                 <td style="color:black;">
                     <a href="/login_handling" id="LoginLink" style="text-decoration: none;visibility: hidden;"></a>
-                    <button style="height:40px ;width: 80px;" id="User_Account">{{{account}}}</button>
+                    <button id="User_Account" class="text_custom">{{{account}}}</button>
                     <script>
                         var LoginButton = document.getElementById("User_Account");
 
@@ -165,7 +171,7 @@
     <!-- 2. Combination in Center component-->
     {{{body}}}
     <!-- 3. Footer component -->
-    <div class="div-footer;" style="background-color: #CBB8B8;">
+    <div class="div-footer2;" style="background-color: #CBB8B8;">
         <table class="table3">
             <tr style="text-align: left;">
                 <td><h5><b>Contact</b></h5></td>

@@ -20,7 +20,7 @@ const clientRedis = new Redis(); // defaut localhost
 // import { engine } from 'express-handlebars';
 const PORT = process.env.PORT || 3500;
 const RedisPort = PORT;
-const TargetTime_Of_Minute = 1;
+const TargetTime_Of_Minute = 10; // allow in 10 minute
 var TargetTime_Of_Milisecond = TargetTime_Of_Minute*60*1000;
 
 // Example using session middleware
@@ -103,13 +103,16 @@ app.use('/contact',require('./routes/Candle_Web_Routes/Contact'));
 app.use('/another_information',require('./routes/Candle_Web_Routes/Another_information'));
 
 // Detail product information
-app.use('/candle_information',require('./routes/Candle_Information/Candle_Information'));
+app.use('/candle_information',require('./routes/Candle_Web_Routes/Candle_Information'));
 
 // Login handling
-app.use('/login_handling',require('./routes/Candle_Information/Login_Web_Page'));
+app.use('/login_handling',require('./routes/Candle_Web_Routes/Login_Web_Page'));
 
 // Add new product information - ONly applicable for Admin account
 app.use('/Add_new_product',require('./routes/Candle_Web_Routes/Add_new_product_Information'));
+
+// Payment handling
+app.use('/payment_handling',require('./routes/Candle_Web_Routes/Payment_Handling'));
 
 //---------------------------------------Specific Route and Middleware declaration--------------------------//
 // Specific Custom Middleware to check authorization and get Json Web Token to make private action. Before this line, it will not require JWToken to execute

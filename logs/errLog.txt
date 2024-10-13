@@ -239,3 +239,4 @@ Require stack:
 20241013	03:14:33	8756c4e1-019e-4f2c-bb2a-05c905669075	TypeError: Cannot read properties of undefined (reading 'username')
 20241013	03:23:15	9357a857-e308-4f3b-87f1-1d1d18660945	TypeError: Cannot read properties of undefined (reading 'username')
 20241013	03:29:25	22a8cf37-3674-42bc-92c1-c42f0b5f13ab	TypeError: Cannot read properties of undefined (reading 'username')
+20241013	15:56:11	842701d7-63db-4ffc-9c34-b6dc4d9539d2	Error: Failed to lookup view "General_Detail_Information" in views directory "./views/Candle_Web_Routes"

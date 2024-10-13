@@ -26,8 +26,17 @@ Router.get('^/$|',async (req,res)=>{
       if(req.url == temp1){
          result = listofcandle[i]; // send the selected candle information to html page
          // console.log("Matching");
-         res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Detail_Product','General_Detail_Information.html'));
-         // res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Detail_Product','Boostrap_Login_Form.html'));
+         // res.status(200).sendFile(path.join(__dirname,'../','../','views','Candle_Web_Routes','General_Detail_Information.html'));
+         var isSessionValid = req.session.personal_information; // Check session is exist or not
+         if(isSessionValid != undefined){
+            var CurrentUser = req.session.personal_information.username;
+            res.status(200).render('General_Detail_Information',{
+               account : `${CurrentUser}`
+            })}
+         else {
+            // Session is timeout -> Request login again
+            res.redirect('/login_handling');
+         }
       }
    }
 })
