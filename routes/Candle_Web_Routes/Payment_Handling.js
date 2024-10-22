@@ -78,9 +78,21 @@ Router.get('/',(req,res)=>{
    var isSessionValid = req.session.personal_information;
    if(isSessionValid != undefined){
       var CurrentUser = req.session.personal_information.username;
+      console.log(`Length of Shopping bag is ${req.session.personal_shopping_bag.length}`);
+      var length_of_shopping_bag = req.session.personal_shopping_bag.length;
       res.status(200).render('Payment_handling',{
       Request_From_Header : "payment",
-      account : `${CurrentUser}`
+      account : `${CurrentUser}`,
+      sessionStorage : JSON.stringify(req.session.personal_shopping_bag)
+      // ShoppingBag1 : req.session.personal_shopping_bag[0][0],
+      // QuatityBag1 : req.session.personal_shopping_bag[0][1],
+      // PriceBag1 : req.session.personal_shopping_bag[0][2]
+      // ShoppingBag2 : req.session.personal_shopping_bag[1][0],
+      // QuatityBag2 : req.session.personal_shopping_bag[1][1],
+      // PriceBag2 : req.session.personal_shopping_bag[1][2],
+      // ShoppingBag3 : req.session.personal_shopping_bag[2],
+      // QuatityBag3 : req.session.personal_shopping_bag[2],
+      // PriceBag3 : req.session.personal_shopping_bag[2]
       });
    } else {
       // Session is timeout -> Request login again

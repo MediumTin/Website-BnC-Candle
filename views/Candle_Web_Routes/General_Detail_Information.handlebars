@@ -49,10 +49,28 @@
                 <h3 id="Candle_Name">3 Day WKND</h3>
                 <h6>Status: Available</h6><br>
                 <h3 id="Candle_Price">300.000 VND</h3><br>
-                <h6>Gift: Match box</h6><br>
+                <h6>Gift: Match box</h6>
+                <div>
+                    <table>
+                        <tr>
+                            <td>1</td>
+                            <td><input id="Quatity_of_product" type="range" min="1" max="10" value="1"></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><p style="font-size:20px">Quatity : </p></td>
+                            <td><p id="Display_for_quatity_of_product" style="font-size:20px"></p></td>
+                        </tr>
+                    </table>
+                </div>
                 <!-- Trigger/Open The Modal -->
-                <button style="height:50px ;width: 200px;" id="myBtn">Buy Now</button>
-                
+                <table>
+                    <tr>
+                        <td><button style="height:50px ;width: 200px;border-radius:10px" id="myBtn">Buy Now</button></td>
+                        <td><button style="height:50px ;width: 200px;border-radius:10px" id="myBtnAddIntoBag">Add into Bag</button></td>
+                    </tr>
+                </table>
+
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
                     <!-- Modal content -->
@@ -104,62 +122,21 @@
                     </div>
                 </div>
                 
-                <script>
-                    // Get the modal
-                    var modal = document.getElementById("myModal");
-                    
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("myBtn");
-                    var CancelButton = document.getElementById("CancelButton");
-                    var LoginButton = document.getElementById("LoginButton");
-                    var LoginButtonLink = document.getElementById("LoginButtonLink");
-                    var PaymentButtonLink = document.getElementById("PaymentButtonLink");
-                    var CurrentUserValid = document.getElementById("User_Account");
-                    
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-                    
-                    // When the user clicks the button, open the modal 
-                    btn.onclick = function() {
-                        // Step 1: Check authentication is completed or not
-                        //          + If completed, redirect to payment logic
-                        //          + If not completed, pop up for login again or still only check product and payment later
-                        console.log(`CurrentUser is ${CurrentUserValid.innerHTML} and type is ${typeof(CurrentUserValid.innerHTML)}`);
-                        if(CurrentUserValid.innerHTML == null){
-                            modal.style.display = "block";
-                            console.log("authentication did not complete!");
-                        }
-                        else {
-                            console.log("authentication completed!");
-                            PaymentButtonLink.click(); // redirect to payment handling
-                        }
-                        
-                    }
-
-                    CancelButton.onclick = function() {
-                        modal.style.display = "none";
-                    }
-
-                    LoginButton.onclick = function() {
-                        LoginButtonLink.click();
-                    }
-                    
-                    // When the user clicks on <span> (x), close the modal
-                    // span.onclick = function() {
-                    // modal.style.display = "none";
-                    // }
-                    
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                    }
-                    function Buy_Product(){};       // Additional action        
-                </script>
+                <div id="AddedIntoBag_showing" class="modal_for_addedIntoBag">
+                    <p style="font-size: 20px">Added into bag</p>
+                    <button style="width:100px; height:20px; border-radius:5px;" id="Check_shopping_bag">Check bag</button>
+                </div>
             </div>
             <script>
+                var Current_Product;
                 Get_Candle_Information();
+                var QuatityNumber = document.getElementById("Quatity_of_product").value;
+                var QuatityButton = document.getElementById("Quatity_of_product");
+                document.getElementById("Display_for_quatity_of_product").innerHTML = QuatityNumber;
+                QuatityButton.onchange = function(){
+                QuatityNumber = document.getElementById("Quatity_of_product").value;
+                   document.getElementById("Display_for_quatity_of_product").innerHTML = QuatityNumber;
+                }
                 function Get_Candle_Information() {
                     var receivedMessage = "";
                     const xhttp = new XMLHttpRequest();
@@ -183,6 +160,8 @@
                             let myarray = "";
                             stringtemp = `${receivedMessage.name}`;
                             myarray = stringtemp.replaceAll(" ","_"); // replace all space in string with underscore
+                            Current_Product = receivedMessage.name;
+                            Current_Product_price = receivedMessage.price;
                             document.getElementById('Candle_Image').src = `${receivedMessage.image}`; 
                             document.getElementById('Candle_Price').innerHTML = `${receivedMessage.price}`;
                             document.getElementById('Candle_Name').innerHTML = `${receivedMessage.name}`;
@@ -191,6 +170,109 @@
                     // setTimeout(Get_Candle_Information, 5000); 
                     
                 }
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                var model_for_AddedIntoBag = document.getElementById("AddedIntoBag_showing");
+                
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+                var BtnAddIntoBag = document.getElementById("myBtnAddIntoBag");
+                var CancelButton = document.getElementById("CancelButton");
+                var LoginButton = document.getElementById("LoginButton");
+                var LoginButtonLink = document.getElementById("LoginButtonLink");
+                var PaymentButtonLink = document.getElementById("PaymentButtonLink");
+                var CurrentUserValid = document.getElementById("User_Account");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                BtnAddIntoBag.onclick = function(){
+                    // 1. Display added with GUI (one small annimation) - show one pop up with one button for showing shopping bag and fade out in 3sec
+                    model_for_AddedIntoBag.style.display = "block";
+                    AddedBoxFadeOut(1);
+
+                    // 2. Add into personal bag (add into session storage)
+                    // Send one request to Server (POST Method) for write this selected information into session storage in server side
+                    
+                    RequestStoreDataToSession();
+
+                    // 3. Still keep current page (keep continous user experience)
+                }
+
+                const RequestStoreDataToSession = () => {
+                    const xhttp = new XMLHttpRequest(); 
+                    xhttp.open("POST", `/candle_information/requestwriteintosession`);
+                    xhttp.setRequestHeader( 
+                    "Content-Type", "application/json" 
+                    ); 
+                    var data = JSON.stringify( 
+                        { 
+                            candle_name: `${Current_Product}`, 
+                            quatity: `${QuatityNumber}`, // waiting dev for one button select number of product later
+                            price : `${Current_Product_price}`
+                        } 
+                    ); 
+                    xhttp.send(data);
+                    // Create a state change callback 
+                    xhttp.onreadystatechange = function () { 
+                        if (xhttp.readyState === 4 && xhttp.status === 200) { 
+                            var receivedMessage = this.responseText;
+                            console.log(`Response text in here ${receivedMessage}`);
+                        }
+                    };
+                }
+                
+                const AddedBoxFadeOut = (AllowedFadeOut)=> {
+                    if(AllowedFadeOut){
+                        setTimeout(
+                            function(){
+                                model_for_AddedIntoBag.style.display = "none"
+                            }
+                            ,
+                            3000
+                        );
+                        
+                    } else {
+                        model_for_AddedIntoBag.style.display = "block";
+                    }
+                }
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                    // Step 1: Check authentication is completed or not
+                    //          + If completed, redirect to payment logic
+                    //          + If not completed, pop up for login again or still only check product and payment later
+                    console.log(`CurrentUser is ${CurrentUserValid.innerHTML} and type is ${typeof(CurrentUserValid.innerHTML)}`);
+                    if(CurrentUserValid.innerHTML == null){
+                        modal.style.display = "block";
+                        console.log("authentication did not complete!");
+                    }
+                    else {
+                        console.log("authentication completed!");
+                        PaymentButtonLink.click(); // redirect to payment handling
+                    }
+                    
+                }
+
+                CancelButton.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                LoginButton.onclick = function() {
+                    LoginButtonLink.click();
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                // span.onclick = function() {
+                // modal.style.display = "none";
+                // }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+                }
+                function Buy_Product(){};       // Additional action 
             </script>
         </div>
         <!-- 2.2. Menu bar for showing product information-->

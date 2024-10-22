@@ -240,3 +240,36 @@ Require stack:
 20241013	03:23:15	9357a857-e308-4f3b-87f1-1d1d18660945	TypeError: Cannot read properties of undefined (reading 'username')
 20241013	03:29:25	22a8cf37-3674-42bc-92c1-c42f0b5f13ab	TypeError: Cannot read properties of undefined (reading 'username')
 20241013	15:56:11	842701d7-63db-4ffc-9c34-b6dc4d9539d2	Error: Failed to lookup view "General_Detail_Information" in views directory "./views/Candle_Web_Routes"
+20241019	18:06:37	9052c0be-a446-458e-a3f0-0b9a931c984f	Error: Cannot set headers after they are sent to the client
+20241019	18:07:26	f953cf4a-7c00-4a40-898d-afa01079986a	Error: Cannot set headers after they are sent to the client
+20241019	18:07:47	f6137aaa-e6c5-4f20-8960-21b9560a7365	Error: Cannot set headers after they are sent to the client
+20241019	18:40:52	b4a64264-5219-4464-9fb2-824a6949b800	TypeError: Cannot read properties of undefined (reading 'Shopping_bag')
+20241019	18:41:02	7d1f9c02-885d-4a2a-8e7f-cdc1c8edc437	TypeError: Cannot read properties of undefined (reading 'Shopping_bag')
+20241019	18:50:32	f90a36ff-ea3b-488f-a3e4-fa37d5451de6	TypeError: Cannot set properties of undefined (setting '0')
+20241019	18:54:16	0d67ac6f-7be1-4f02-90cc-a7dca2f7a75a	TypeError: Cannot set properties of undefined (setting '0')
+20241019	18:59:44	b16a5ffb-a188-49cc-9030-f41f4b461211	TypeError: Cannot set properties of undefined (setting '0')
+20241020	00:57:01	560f0e5a-825e-406a-b927-1aaff5d92c3c	TypeError: Cannot set properties of undefined (setting '0')
+20241020	00:58:24	9d500a92-fed5-49a1-b348-92bfb9bc7d31	TypeError: Cannot set properties of undefined (setting '0')
+20241020	00:58:47	765bdb28-212b-4bb7-bc41-d3f1e002078b	TypeError: Cannot set properties of undefined (setting '0')
+20241020	01:03:41	a65e7d8d-a548-4631-ad20-7554aa2e53b8	TypeError: Cannot set properties of undefined (setting '0')
+20241020	23:21:35	f2a67dd1-b3bb-4097-8933-6c26f857efb5	TypeError: Cannot set properties of undefined (setting '0')
+20241020	23:23:26	41fb7ff9-f0f4-42cd-a1da-ff79ba0e4456	TypeError: Cannot set properties of undefined (setting '0')
+20241020	23:24:38	67845a71-c64d-44af-a7dd-513f0666dda1	TypeError: Cannot set properties of undefined (setting '0')
+20241020	23:25:52	3fd91236-5399-44fa-a597-76accd69c46b	TypeError: Cannot set properties of undefined (setting '0')
+20241021	23:23:38	4d772699-61fc-4abc-a3cf-0f3713cb0655	Error: Parse error on line 65:
+...">Quatity{{document.getElementById("Quat
+-----------------------^
+Expecting 'ID', got 'INVALID'
+20241022	00:13:22	8d1899d0-c8de-42f5-aa6a-f0c1fcc3f801	TypeError: Cannot read properties of undefined (reading '0')
+20241022	00:13:55	0b951c9c-7c59-436e-b36f-6fb7f59fef80	TypeError: Cannot read properties of undefined (reading '0')
+20241022	00:16:16	ee17b168-9628-4b7e-b9e1-66441e8b8ebf	TypeError: Cannot read properties of undefined (reading '0')
+20241023	01:08:48	2b0df657-c797-40c1-a8aa-2168ddc2a8b7	TypeError: Cannot read properties of undefined (reading '0')
+20241023	01:08:53	f37719c5-a39d-4c8d-84b6-a222a0c7943c	TypeError: Cannot read properties of undefined (reading '0')
+20241023	01:20:21	972a3c8a-b377-427a-b790-f79e952a3376	TypeError: Cannot read properties of undefined (reading '0')
+20241023	02:19:47	84775178-96d8-49e7-92e5-07d2f478c48b	Error: Parse error on line 446:
+...ge_shopping_bag" >{{sessionStorage[0]}}<
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID'
+20241023	02:59:17	5c209f1f-2031-4b5b-80ae-5e69907d98c5	TypeError: Cannot read properties of undefined (reading 'length')
+20241023	02:59:29	93b5e3e9-aaf8-4f73-87a1-d9afce1d57eb	TypeError: Cannot read properties of undefined (reading 'length')
+20241023	03:00:10	a6a21b8a-dce2-4206-b861-9dd17245bdb0	TypeError: Cannot read properties of undefined (reading 'length')

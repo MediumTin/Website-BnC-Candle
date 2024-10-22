@@ -6,7 +6,8 @@ const { createClient } = require('redis');
 const Redis_API = require('../../controllers/API_with_Redis/API_Redis');
 const Menu_Candle_Processing = require('../../controllers/Website_Candle_Light/Menu_Candle_Processing_MongooseDB');
 var result = "";
-
+var Shopping_bag_array = []; // declare one array (listed node), can easy for adding new element into it.
+var Shopping_bag_array_counter = 0;
 const client = createClient();  // Create a Redis client
 // New implementation for Engine template handlerbar
 
@@ -42,9 +43,33 @@ Router.get('^/$|',async (req,res)=>{
 })
 
 Router.post('/',(req,res)=>{
-   console.log(`Post status is received. Message is ${req.body.name}`);
+   console.log(`Post status is received in Candle_information is ${req.body.name}`);
    // console.log(result);
    res.status(200).send(result);
+})
+
+Router.post('/requestwriteintosession',(req,res)=>{
+   console.log(`Post status is received in requestwriteintosession is ${req.body.candle_name}`);
+   var local_request_to_write = req.body.candle_name;
+   var local_request_quatity = req.body.quatity;
+   var local_request_price = req.body.price;
+   var isSessionValid = req.session.personal_information; // Check session is exist or not
+   if(isSessionValid != undefined){
+      
+      console.log(`Previous value is : ${Shopping_bag_array}`);
+      Shopping_bag_array[Shopping_bag_array_counter] = [
+         `${local_request_to_write}`,
+         `${local_request_quatity}`,
+         `${local_request_price}`
+      ];
+      Shopping_bag_array_counter+=1;
+      req.session.personal_shopping_bag = Shopping_bag_array;
+      res.status(200).send(local_request_to_write);
+   }
+   else {
+      // Session is timeout -> Request login again
+      res.redirect('/login_handling');
+   }
 })
 
 const ReadAllData_From_Database_And_RedisCache = async() =>{

@@ -64,6 +64,9 @@ const LoginHandling = async(req,res) => {
             smart_banking : "Admin",
             momo : "Admin"
       };
+      // req.session.personal_shopping_bag = {
+      //    Shopping_bag: "admin"
+      // };
       // res.render('Search_And_Filtering_Product_AdminRight',{
       //    account : `${CurrentUser}`
       // });
@@ -93,6 +96,9 @@ const LoginHandling = async(req,res) => {
             smart_banking : "Vietinbank",
             momo : "0826780002"
       };
+      // req.session.personal_shopping_bag = {
+      //    Shopping_bag: "admin"
+      // };
       res.redirect('/');
       
       // res.render('Search_And_Filtering_Product',{

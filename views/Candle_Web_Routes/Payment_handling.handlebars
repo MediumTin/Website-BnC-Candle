@@ -440,58 +440,54 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <p class="dis info my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quos ipsa
-                    sed officiis odio
-                </p>
                 <div class="radiobtn">
                     <input type="radio" name="box" id="one">
                     <input type="radio" name="box" id="two">
                     <input type="radio" name="box" id="three">
-                    <label for="one" class="box py-2 first">
-                        <div class="d-flex align-items-start">
-                            <span class="circle"></span>
-                            <div class="course">
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <span class="fw-bold">
-                                        Collection 01
-                                    </span>
-                                    <span class="fas fa-dollar-sign">29</span>
-                                </div>
-                                <span>10 x Presets. Released in 2018</span>
-                            </div>
+                    <p id="Storage_shopping_bag" style="display:none">{{sessionStorage}}</p>
+                    <p>Shopping Bag</p>
+                    <div class="my_scroll_div">
+                        {{!-- Start first display --}}
+                        <div id="ShoppinigDiv">
+                            {{!-- Javascript will insert automatically in here for code generation --}}
                         </div>
-                    </label>
-                    <label for="two" class="box py-2 second">
-                        <div class="d-flex">
-                            <span class="circle"></span>
-                            <div class="course">
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <span class="fw-bold">
-                                        Collection 01
-                                    </span>
-                                    <span class="fas fa-dollar-sign">29</span>
-                                </div>
-                                <span>10 x Presets. Released in 2018</span>
-                            </div>
-                        </div>
-                    </label>
-                    <label for="three" class="box py-2 third">
-                        <div class="d-flex">
-                            <span class="circle"></span>
-                            <div class="course">
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <span class="fw-bold">
-                                        Collection 01
-                                    </span>
-                                    <span class="fas fa-dollar-sign">29</span>
-                                </div>
-                                <span>10 x Presets. Released in 2018</span>
-                            </div>
-                        </div>
-                    </label>
+                        {{!-- End first display --}}
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            ReadAllShoppingBag();
+            function ClearAvailableShoppingBag(){
+                const ShoppingDiv = document.getElementById("ShoppinigDiv");
+                ShoppingDiv.textContent = "";
+            }
+            function ReadAllShoppingBag(){
+                ClearAvailableShoppingBag();
+                const ShoppingDiv = document.querySelector("#ShoppinigDiv");
+                const SessionStorage = document.getElementById("Storage_shopping_bag").innerHTML;
+                const SessionStorage_Filtered = JSON.parse(SessionStorage);
+                const ShoppingBagLength = SessionStorage_Filtered.length;
+                console.log(`Value length is ${ShoppingBagLength}`);
+                for(let i=0;i<ShoppingBagLength;i++){
+                    ShoppingDiv.innerHTML += 
+                        `
+                        <table style="background-color:grey; border-radius: 3px;">
+                            <tr>
+                                <td rowspan="2" style="width: 30px;text-align: center;"><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                                <td style="width: 400px;font-size:15px;text-align: left;">${SessionStorage_Filtered[i][0]}</td>
+                                <td style="font-size:15px;text-align: left;">Price:${SessionStorage_Filtered[i][2]}VND</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 400px;text-align: left;"></td>
+                                <td style="font-size:15px;text-align: left;">Quatity :${SessionStorage_Filtered[i][1]}</td>
+                            </tr>
+                        </table><br>
+                        `;
+                        
+                }
+            }
+        </script>
         <div class="box-2">
             <div class="box-inner-2">
                 <div>
@@ -501,16 +497,16 @@
                 <form action="">
                     <div class="mb-3">
                         <p class="dis fw-bold mb-2">Email address</p>
-                        <input class="form-control" type="email" value="luke@skywalker.com">
+                        <input id="email_of_buyer" class="form-control" type="email" value="luke@skywalker.com">
                     </div>
                     <div>
                         <p class="dis fw-bold mb-2">Card details</p>
                         <div class="d-flex align-items-center justify-content-between card-atm border rounded">
                             <div class="fab fa-cc-visa ps-3"></div>
-                            <input type="text" class="form-control" placeholder="Card Details">
+                            <input id="visa_number" type="text" class="form-control" placeholder="Card Details">
                             <div class="d-flex w-50">
-                                <input type="text" class="form-control px-0" placeholder="MM/YY">
-                                <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                                <input id="visa_valid_date" type="text" class="form-control px-0" placeholder="MM/YY">
+                                <input id="visa_cvv" type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
                             </div>
                         </div>
                         <div class="my-3 cardname">
