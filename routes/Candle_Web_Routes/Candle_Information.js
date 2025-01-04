@@ -11,7 +11,14 @@ var result = "";
 var Shopping_bag_array = []; // declare one array (listed node), can easy for adding new element into it.
 var Shopping_bag_array_counter = 0;
 // var isFirstTimeLogin = true;
-const client = createClient();  // Create a Redis client
+const client = createClient({
+   username: 'default',
+   password: 'eKmCEByJceBAy8EXlviDdGnvAbgwLWmI',
+   socket: {
+       host: 'redis-17737.c16.us-east-1-3.ec2.redns.redis-cloud.com',
+       port: 17737
+   }
+});  // Create a Redis client
 // New implementation for Engine template handlerbar
 
 Router.get('^/$|',async (req,res)=>{

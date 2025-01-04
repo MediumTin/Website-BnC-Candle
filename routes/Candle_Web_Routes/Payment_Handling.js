@@ -11,7 +11,14 @@ const { createClient } = require('redis');
 const samplearray2 = ['Location 1', 'Location 2'];
 const nodemailer = require('nodemailer'); // declare for mail service
 
-const client = createClient();  // Create a Redis client
+const client = createClient({
+   username: 'default',
+   password: 'eKmCEByJceBAy8EXlviDdGnvAbgwLWmI',
+   socket: {
+       host: 'redis-17737.c16.us-east-1-3.ec2.redns.redis-cloud.com',
+       port: 17737
+   }
+});  // Create a Redis client
 
 var mailTransport = nodemailer.createTransport({
    service: "gmail",
