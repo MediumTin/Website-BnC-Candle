@@ -321,3 +321,5 @@ Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 
 ...="{{User_for_payment}}}">             
 -----------------------^
 Expecting 'CLOSE', 'OPEN_SEXPR', 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE_UNESCAPED'
+20250104	17:21:25	b47e211f-aea7-45d7-b48e-dfd94648d8d2	Error: The client is closed
+20250104	17:22:17	7778e8d1-7e2f-4faf-b649-066f62ec0683	Error: The client is closed

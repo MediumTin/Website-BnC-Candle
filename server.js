@@ -19,29 +19,25 @@ var cryp = require('crypto');
 const Redis = require('ioredis');
 const { v4: uuidv4 } = require("uuid");
 const RedisStore = require('connect-redis').default;
-// const clientRedis = new Redis(); // defaut localhost
-let clientRedis = redis.createClient();
-clientRedis.connect().catch(console.error);
+const { createClient } = require('redis');
+const clientRedis = new Redis({
+    port: 17737,          // Redis port
+    host: 'redis-17737.c16.us-east-1-3.ec2.redns.redis-cloud.com',   // Redis host
+    family: 4,           // 4 (IPv4) or 6 (IPv6)
+    password: 'eKmCEByJceBAy8EXlviDdGnvAbgwLWmI',
+    db: 0
+}); // defaut localhost
+// let clientRedis = redis.createClient();
 
-var mailTransport = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth : {
-        user: "nguyentrungtin1002@gmail.com",
-        pass : "xsmm tqvr dldv fcys",
-    }
-});
+// const clientRedis  = redis.createClient({
+//     username: 'default',
+//     password: 'eKmCEByJceBAy8EXlviDdGnvAbgwLWmI',
+//     socket: {
+//         host: 'redis-17737.c16.us-east-1-3.ec2.redns.redis-cloud.com',
+//         port: 17737
+//     }
+// });
 
-const SENDMAIL = async (mailDetails) => {
-    try {
-      const info = await transporter.sendMail(mailDetails)
-      callback(info);
-    } catch (error) {
-      console.log(error);
-    } 
-  };
 
 // import { engine } from 'express-handlebars';
 const PORT = process.env.PORT || 3500;
@@ -49,6 +45,12 @@ const RedisPort = PORT;
 const TargetTime_Of_Minute = 20; // allow in 10 minute
 var TargetTime_Of_Milisecond = TargetTime_Of_Minute*60*1000;
 
+// const TestHa = async () =>{
+//     await client.connect();
+//     await client.set('foo4', 'bar');
+//     const result = await client.get('foo');
+//     console.log(result)  // >>> bar
+// }
 // Example using session middleware
 app.use(session({
     genid: function(req) {
@@ -72,7 +74,7 @@ app.set('view engine', 'handlebars');
 // app.set('views', './views/Example_Express_Handlebar');
 app.set('views', './views/Candle_Web_Routes');
 
-const client = redis.createClient();
+// const client = redis.createClient();
 // client.connect();
 
 // Connect to MongoDB
@@ -91,7 +93,10 @@ app.use(express.json());
 app.use(cookieParser());
 // 1.6. Built-in middleware to serve static files to all routes (if needed, can give permission only some specific routes)
 app.use(express.static(path.join(__dirname,'/public')));   
-
+app.get('/test', (req,res)=>{
+    TestHa();
+    res.send("OK");
+})
 //---------------------------------------Common Route declaration-------------------------------------------//
 console.log("Program is running ----------");
 // // Example
@@ -288,9 +293,6 @@ mongoose.connection.once('open',()=>{
 })
 
 // app.listen(PORT, ()=> console.log(`Server is running on Port: ${PORT}`)); 
-
-// New implementation
-
 
 
 

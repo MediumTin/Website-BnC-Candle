@@ -14,7 +14,7 @@ const Global_Interface = require('../../controllers/Website_Candle_Light/Global_
 const session = require('express-session');
 const Redis = require('ioredis');
 const RedisStore = require('connect-redis').default;
-const clientRedis = new Redis(); // defaut localhost
+// const clientRedis = new Redis(); // defaut localhost
 const TargetTime_Of_Minute = 1;
 var TargetTime_Of_Milisecond = TargetTime_Of_Minute*60*1000;
 
